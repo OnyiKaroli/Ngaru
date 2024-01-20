@@ -3,9 +3,9 @@
         <div class="container">
           <nav class="navbar navbar-expand-lg px-0">
             <a class="navbar-brand" href="index.php">
-              <img src="images/logo.png" alt="HomeID"
+              <img src="images/logo.png" alt="Ngaru"
                          class="d-none d-lg-inline-block">
-              <img src="images/logo-white.png" alt="HomeID"
+              <img src="images/logo-white.png" alt="Ngaru"
                          class="d-inline-block d-lg-none">
             </a>
             <div class="d-flex d-lg-none ml-auto">
@@ -38,6 +38,12 @@
                   <a class="nav-link p-0"
                   href="about-us" >
                     About Us</a>
+                  </li>
+                  <li id="navbar-item-dashboard" aria-haspopup="true" aria-expanded="false"
+                  class="nav-item py-2 py-lg-5 px-0 px-lg-4">
+                  <a class="nav-link p-0"
+                  href="blogs" >
+                    Blogs</a>
                   </li>
                 <li id="navbar-item-pages" aria-haspopup="true" aria-expanded="false"
         class="nav-item dropdown py-2 py-lg-5 px-0 px-lg-4">

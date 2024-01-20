@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Real Estate Html Template">
+    <meta name="description" content="Ngaru Logistics Ltd">
     <meta name="author" content="">
     <meta name="generator" content="Jekyll">
-    <title>Contact  - HomeID</title>
+    <title>Contact  - Ngaru</title>
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet">
@@ -31,12 +31,12 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@">
     <meta name="twitter:title" content="Contact ">
-    <meta name="twitter:description" content="Real Estate Html Template">
+    <meta name="twitter:description" content="Ngaru Logistics Ltd">
     <meta name="twitter:image" content="images/homeid-social-logo.png">
     <!-- Facebook -->
-    <meta property="og:url" content="contact-us-1.html">
+    <meta property="og:url" content="contact-us.php">
     <meta property="og:title" content="Contact ">
-    <meta property="og:description" content="Real Estate Html Template">
+    <meta property="og:description" content="Ngaru Logistics Ltd">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/homeid-social.png">
     <meta property="og:image:type" content="image/png">
@@ -695,7 +695,7 @@
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-6 mb-md-0">
             <a class="d-block mb-2" href="#">
-              <img src="images/logo-white-primary.png" alt="HomeID">
+              <img src="images/logo-white-primary.png" alt="Ngaru">
             </a>
             <div class="lh-26 font-weight-500">
               <p class="mb-0">58 Howard Street #2 San Francisco</p>
@@ -980,7 +980,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="mt-2">By creating an account, you agree to HomeID
+                <div class="mt-2">By creating an account, you agree to Ngaru
                   <a class="text-heading" href="#"><u>Terms of Use</u> </a> and
                   <a class="text-heading" href="#"><u>Privacy Policy</u></a>.
                 </div>
