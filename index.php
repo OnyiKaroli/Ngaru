@@ -134,7 +134,7 @@
       <section class="mb-6">
         <div class="container">
           <h2 class="text-dark text-center lh-1625">
-            Featured Neighborhoods
+            Featured Locations
           </h2>
           <span class="heading-divider mx-auto mb-7"></span>
           <div class="row">

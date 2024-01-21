@@ -315,7 +315,7 @@
                   </div>
                 </div>
                 <div class="card-body pt-3 px-0 pb-1">
-                  <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary">Home in Metric Way</a></h2>
+                  <h2 class="fs-16 mb-1"><a href="single-property" class="text-dark hover-primary">Home in Metric Way</a></h2>
                   <p class="font-weight-500 text-gray-light mb-1">1421 San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-1">
                     $1.250.000
@@ -386,7 +386,7 @@
                   </div>
                 </div>
                 <div class="card-body pt-3 px-0 pb-1">
-                  <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary">Garden Gingerbread House</a></h2>
+                  <h2 class="fs-16 mb-1"><a href="single-property" class="text-dark hover-primary">Garden Gingerbread House</a></h2>
                   <p class="font-weight-500 text-gray-light mb-1">1421 San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-1">
                     $5.700
@@ -458,7 +458,7 @@
                   </div>
                 </div>
                 <div class="card-body pt-3 px-0 pb-1">
-                  <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary">Affordable Urban House</a></h2>
+                  <h2 class="fs-16 mb-1"><a href="single-property" class="text-dark hover-primary">Affordable Urban House</a></h2>
                   <p class="font-weight-500 text-gray-light mb-1">1421 San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-1">
                     $5.700
@@ -530,7 +530,7 @@
                   </div>
                 </div>
                 <div class="card-body pt-3 px-0 pb-1">
-                  <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary">Villa on Hollywood Boulevard</a></h2>
+                  <h2 class="fs-16 mb-1"><a href="single-property" class="text-dark hover-primary">Villa on Hollywood Boulevard</a></h2>
                   <p class="font-weight-500 text-gray-light mb-1">1421 San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-1">
                     $5.700
@@ -602,7 +602,7 @@
                   </div>
                 </div>
                 <div class="card-body pt-3 px-0 pb-1">
-                  <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary">Affordable Urban House</a></h2>
+                  <h2 class="fs-16 mb-1"><a href="single-property" class="text-dark hover-primary">Affordable Urban House</a></h2>
                   <p class="font-weight-500 text-gray-light mb-1">1421 San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-1">
                     $5.700
@@ -674,7 +674,7 @@
                   </div>
                 </div>
                 <div class="card-body pt-3 px-0 pb-1">
-                  <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary">Explore Old Barcelona</a></h2>
+                  <h2 class="fs-16 mb-1"><a href="single-property" class="text-dark hover-primary">Explore Old Barcelona</a></h2>
                   <p class="font-weight-500 text-gray-light mb-1">1421 San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-1">
                     $1.250.000
@@ -745,7 +745,7 @@
                   </div>
                 </div>
                 <div class="card-body pt-3 px-0 pb-1">
-                  <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary">Home in Metric Way</a></h2>
+                  <h2 class="fs-16 mb-1"><a href="single-property" class="text-dark hover-primary">Home in Metric Way</a></h2>
                   <p class="font-weight-500 text-gray-light mb-1">1421 San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-1">
                     $5.700
@@ -817,7 +817,7 @@
                   </div>
                 </div>
                 <div class="card-body pt-3 px-0 pb-1">
-                  <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary">Home in Metric Way</a></h2>
+                  <h2 class="fs-16 mb-1"><a href="single-property" class="text-dark hover-primary">Home in Metric Way</a></h2>
                   <p class="font-weight-500 text-gray-light mb-1">1421 San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-1">
                     $1.250.000
@@ -888,7 +888,7 @@
                   </div>
                 </div>
                 <div class="card-body pt-3 px-0 pb-1">
-                  <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary">Home in Metric Way</a></h2>
+                  <h2 class="fs-16 mb-1"><a href="single-property" class="text-dark hover-primary">Home in Metric Way</a></h2>
                   <p class="font-weight-500 text-gray-light mb-1">1421 San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-1">
                     $1.250.000
@@ -959,7 +959,7 @@
                   </div>
                 </div>
                 <div class="card-body pt-3 px-0 pb-1">
-                  <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary">Home in Metric Way</a></h2>
+                  <h2 class="fs-16 mb-1"><a href="single-property" class="text-dark hover-primary">Home in Metric Way</a></h2>
                   <p class="font-weight-500 text-gray-light mb-1">1421 San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-1">
                     $1.250.000
@@ -1030,7 +1030,7 @@
                   </div>
                 </div>
                 <div class="card-body pt-3 px-0 pb-1">
-                  <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary">Affordable Urban House</a></h2>
+                  <h2 class="fs-16 mb-1"><a href="single-property" class="text-dark hover-primary">Affordable Urban House</a></h2>
                   <p class="font-weight-500 text-gray-light mb-1">1421 San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-1">
                     $5.700
@@ -1102,7 +1102,7 @@
                   </div>
                 </div>
                 <div class="card-body pt-3 px-0 pb-1">
-                  <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary">Home in Metric Way</a></h2>
+                  <h2 class="fs-16 mb-1"><a href="single-property" class="text-dark hover-primary">Home in Metric Way</a></h2>
                   <p class="font-weight-500 text-gray-light mb-1">1421 San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-1">
                     $1.250.000
