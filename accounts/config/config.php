@@ -8,7 +8,7 @@
     
 
 
-    $servedby_name = $_SESSION['user']['name'];
+    $servedby_name = $_SESSION['user']['firstname'];
     $servedby_id = $_SESSION['user']['email'];
     $servedby_role = $_SESSION['user']['role'];
     

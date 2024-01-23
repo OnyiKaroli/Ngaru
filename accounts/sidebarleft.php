@@ -97,6 +97,23 @@
                   </p>
                 </a>
               </li>
+              <li class="nav-header">Blogs</li>
+              <li class="nav-item has-treeview">
+                <a href="all-blogs" class="nav-link">
+                  <i class="fas fa-th nav-icon"></i>
+                  <p>
+                    View Blogs
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="add-blogs" class="nav-link">
+                  <i class="fas fa-th nav-icon"></i>
+                  <p>
+                    Add Blog
+                  </p>
+                </a>
+              </li>
             </ul>
 <?php
   }

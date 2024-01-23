@@ -318,128 +318,41 @@
       </section>
       <section class="bg-gray-02 pt-10 pb-10">
         <div class="container">
-          <p class="text-primary letter-spacing-263 text-uppercase lh-186 text-center mb-0">new & articles</p>
+          <p class="text-primary letter-spacing-263 text-uppercase lh-186 text-center mb-0">news & articles</p>
           <h2 class="text-center lh-1625 text-dark pb-1">
             Check Out Recent News & Articles
           </h2>
           <div class="mx-n2">
             <div class="slick-slider mt-6 mx-n1 slick-dots-mt-0"
                  data-slick-options='{"slidesToShow": 3, "autoplay":false,"arrows":false,"dots":true,"infinite": true,"responsive":[{"breakpoint": 992,"settings": {"slidesToShow":2}},{"breakpoint": 768,"settings": {"slidesToShow": 2,"autoplay":true}},{"breakpoint": 576,"settings": {"slidesToShow": 1,"arrows":false,"dots":true,"autoplay":true}}]}'>
+            <?php
+              $select = mysqli_query($server, "SELECT * FROM `blogs_tb` WHERE `status`!='pending' ORDER BY `tdate` DESC LIMIT 5") or die(mysqli_error($server));
+              while ($column = mysqli_fetch_assoc($select)) {
+            ?>
               <div class="item py-4" data-animate="fadeInUp">
                 <div class="card border-0 shadow-xxs-3">
                   <div class="position-relative d-flex align-items-end card-img-top">
-                    <a href="blog-single" class="hover-shine">
+                    <?php echo"<a href='blog-single?bid=".$column['id']."' class='hover-shine'>"?>
                       <img src="images/post-05.jpg"
                                      alt="The Interior Design The Hall On str. Filimonovo">
                     </a>
                     <a href="#"
                                class="badge pos-fixed-bottom text-white bg-dark-opacity-04 fs-13 font-weight-500 bg-hover-primary hover-white mx-2 my-4 position-absolute">
-                      Creative
+                               <?php echo $column['category']; ?>
                     </a>
                   </div>
                   <div class="card-body px-5 pt-3 pb-5">
-                    <p class="mb-1 fs-13">Dec 16, 2020</p>
+                    <p class="mb-1 fs-13"><?php echo $column['date']; ?></p>
                     <h3 class="fs-18 text-heading lh-194 mb-1">
-                      <a href="blog-single" class="text-heading hover-primary">Navigating Zoning Regulations: A Guide for Land Buyers</a>
+                      <?php echo"<a href='blog-single?bid=".$column['id']."' class='text-heading hover-primary'>".$column['title']."</a>";?>
                     </h3>
-                    <p class="mb-3">Zoning laws dictate how land can be used, affecting everything from residential to commercial developments.</p>
-                    <a class="text-heading font-weight-500" href="blog-single">Learn more <i
-                                    class="far fa-long-arrow-right text-primary ml-1"></i></a>
+                    <p class="mb-3"><?php echo $column['description']; ?></p>
+                    <?php echo"<a class='text-heading font-weight-500' href='blog-single?bid=".$column['id']."'>Learn more <i
+                                    class='far fa-long-arrow-right text-primary ml-1'></i></a>"?>
                   </div>
                 </div>
               </div>
-              <div class="item py-4" data-animate="fadeInUp">
-                <div class="card border-0 shadow-xxs-3">
-                  <div class="position-relative d-flex align-items-end card-img-top">
-                    <a href="blog-single" class="hover-shine">
-                      <img src="images/post-06.jpg"
-                                     alt="Ten Benefits Of Rentals That May Change Your Perspective">
-                    </a>
-                    <a href="#"
-                               class="badge pos-fixed-bottom text-white bg-dark-opacity-04 fs-13 font-weight-500 bg-hover-primary hover-white mx-2 my-4 position-absolute">
-                      Rentals
-                    </a>
-                  </div>
-                  <div class="card-body px-5 pt-3 pb-5">
-                    <p class="mb-1 fs-13">Dec 16, 2020</p>
-                    <h3 class="fs-18 text-heading lh-194 mb-1">
-                      <a href="blog-single" class="text-heading hover-primary">Investing in Land from Afar: A Diaspora Perspective</a>
-                    </h3>
-                    <p class="mb-3">For members of the diaspora looking to invest in land in their home country, the journey involves unique challenges and opportunities. </p>
-                    <a class="text-heading font-weight-500" href="blog-single">Learn more <i
-                                    class="far fa-long-arrow-right text-primary ml-1"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="item py-4" data-animate="fadeInUp">
-                <div class="card border-0 shadow-xxs-3">
-                  <div class="position-relative d-flex align-items-end card-img-top">
-                    <a href="blog-single" class="hover-shine">
-                      <img src="images/post-07.jpg"
-                                     alt="Future Office Buldings Intelligent by Design">
-                    </a>
-                    <a href="#"
-                               class="badge pos-fixed-bottom text-white bg-dark-opacity-04 fs-13 font-weight-500 bg-hover-primary hover-white mx-2 my-4 position-absolute">
-                      Rentals
-                    </a>
-                  </div>
-                  <div class="card-body px-5 pt-3 pb-5">
-                    <p class="mb-1 fs-13">Dec 16, 2020</p>
-                    <h3 class="fs-18 text-heading lh-194 mb-1">
-                      <a href="blog-single" class="text-heading hover-primary">The Future of Residential Development: Trends in Land Buying</a>
-                    </h3>
-                    <p class="mb-3">The residential development landscape is continually evolving, driven by changing preferences and emerging trends.</p>
-                    <a class="text-heading font-weight-500" href="blog-single">Learn more <i
-                                    class="far fa-long-arrow-right text-primary ml-1"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="item py-4" data-animate="fadeInUp">
-                <div class="card border-0 shadow-xxs-3">
-                  <div class="position-relative d-flex align-items-end card-img-top">
-                    <a href="blog-single" class="hover-shine">
-                      <img src="images/post-05.jpg"
-                                     alt="The Interior Design The Hall On str. Filimonovo">
-                    </a>
-                    <a href="#"
-                               class="badge pos-fixed-bottom text-white bg-dark-opacity-04 fs-13 font-weight-500 bg-hover-primary hover-white mx-2 my-4 position-absolute">
-                      Creative
-                    </a>
-                  </div>
-                  <div class="card-body px-5 pt-3 pb-5">
-                    <p class="mb-1 fs-13">Dec 16, 2020</p>
-                    <h3 class="fs-18 text-heading lh-194 mb-1">
-                      <a href="blog-single" class="text-heading hover-primary">Commercial Land Investment Strategies for Entrepreneurs</a>
-                    </h3>
-                    <p class="mb-3">We'll provide insights into location analysis, market trends, and potential return on investment (ROI) for different types of commercial developments.</p>
-                    <a class="text-heading font-weight-500" href="blog-single">Learn more <i
-                                    class="far fa-long-arrow-right text-primary ml-1"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="item py-4" data-animate="fadeInUp">
-                <div class="card border-0 shadow-xxs-3">
-                  <div class="position-relative d-flex align-items-end card-img-top">
-                    <a href="blog-single" class="hover-shine">
-                      <img src="images/post-06.jpg"
-                                     alt="Ten Benefits Of Rentals That May Change Your Perspective">
-                    </a>
-                    <a href="#"
-                               class="badge pos-fixed-bottom text-white bg-dark-opacity-04 fs-13 font-weight-500 bg-hover-primary hover-white mx-2 my-4 position-absolute">
-                      Rentals
-                    </a>
-                  </div>
-                  <div class="card-body px-5 pt-3 pb-5">
-                    <p class="mb-1 fs-13">Dec 16, 2020</p>
-                    <h3 class="fs-18 text-heading lh-194 mb-1">
-                      <a href="blog-single" class="text-heading hover-primary">Making Your Dream Home a Reality: Tips for Residential Land Buyers</a>
-                    </h3>
-                    <p class="mb-3">Buying land for your dream home is a significant and often emotional journey. This blog post will explore the practical and ...</p>
-                    <a class="text-heading font-weight-500" href="blog-single">Learn more <i
-                                    class="far fa-long-arrow-right text-primary ml-1"></i></a>
-                  </div>
-                </div>
-              </div>
+              <?php }?>
             </div>
           </div>
         </div>

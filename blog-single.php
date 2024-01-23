@@ -1,3 +1,7 @@
+<?php
+  $view_id = $_GET['bid'];
+  require_once 'accounts/config/config.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,7 +10,7 @@
     <meta name="description" content="Ngaru Logistics Ltd">
     <meta name="author" content="">
     <meta name="generator" content="Jekyll">
-    <title>Blog Details 2 - Ngaru</title>
+    <title>Read Blog - Ngaru</title>
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet">
@@ -58,70 +62,33 @@
           </nav>
         </div>
       </section>
+      <?php
+        $select = mysqli_query($server, "SELECT * FROM `blogs_tb` WHERE `id` = '$view_id' AND `status`!='pending' ORDER BY `tdate` DESC LIMIT 5") or die(mysqli_error($server));
+        while ($column = mysqli_fetch_assoc($select)) {
+      ?>
       <section class="pb-12">
         <div class="container">
           <ul class="list-inline text-center mb-3">
             <li class="list-inline-item">
-              <a href="#" class="badge bg-gray-01 letter-spacing-1 text-body bg-hover-accent px-2">Rentals</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#" class="badge bg-gray-01 letter-spacing-1 text-body bg-hover-accent px-2">Creative</a>
+              <a href="#" class="badge bg-gray-01 letter-spacing-1 text-body bg-hover-accent px-2"><?php echo $column['category']; ?></a>
             </li>
           </ul>
           <h2 class="fs-md-32 text-heading lh-141 mb-6 mxw-670 text-center">
-            Ten Benefits Of Rentals That May Change Your Perspective
+          <?php echo $column['title']; ?>
           </h2>
           <ul class="list-inline text-center mb-8">
             <li class="list-inline-item mr-4"><img class="mr-1" src="images/author-01.jpg"
-                                                   alt="D. Warren"> D. Warren
+                                                   alt="<?php echo $column['author']; ?>"> <?php echo $column['author']; ?>
             </li>
-            <li class="list-inline-item mr-4"><i class="far fa-calendar mr-1"></i> 30th Dec, 2020</li>
-            <li class="list-inline-item mr-4"><i class="far fa-eye mr-1"></i> 149 views</li>
+            <li class="list-inline-item mr-4"><i class="far fa-calendar mr-1"></i> <?php echo $column['date']; ?></li>
           </ul>
           <img class="mb-9" src="images/blog-details.jpg"
-             alt="Ten Benefits Of Rentals That May Change Your Perspective">
+             alt="<?php echo $column['title']; ?>">
           <div class="mxw-751">
             <div class="lh-214 mb-9">
-              <p>Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus
-                scelerisque
-                eleifend
-                donec. Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae
-                semper quis
-                lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas
-                sed...</p>
-              <p class="ml-8 pl-4 fs-16 text-heading font-weight-500 lh-2 border-left border-4x border-primary mxw-521 my-6">
-                GrandHome is an estate agency that
-                helps people live in more thoughtful and
-                beautiful ways. We believe in design as a powerful force for good.</p>
-              <p>
-                Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend
-                donec. Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae
-                semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus
-                egestas sed...
-              </p>
-              <p>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                id est laboruLorem ipsum dolor sit amet datat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laboruore Duis autem vel eum iriure dolor in hendvelit esse molestie
-                consequat, est usus legentis vel illum dolore eu feugiat nulla...
-              </p>
-              <p>
-                Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim
-                placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis
-              </p>
+              <p><?php echo $column['description']; ?></p>
             </div>
             <div class="row pb-7 mb-6 border-bottom">
-              <div class="col-sm-6 d-flex">
-                <span class="d-inline-block mr-2"><i class="fal fa-tags"></i></span>
-                <ul class="list-inline">
-                  <li class="list-inline-item mr-0"><a href="#" class="text-muted hover-dark">real estate,</a>
-                  </li>
-                  <li class="list-inline-item mr-0"><a href="#" class="text-muted hover-dark">thememove,</a>
-                  </li>
-                  <li class="list-inline-item mr-0"><a href="#" class="text-muted hover-dark">building</a>
-                  </li>
-                </ul>
-              </div>
               <div class="col-sm-6 text-left text-sm-right">
                 <span class="d-inline-block text-heading font-weight-500 lh-17 mr-1">Share this post</span>
                 <button type="button"
@@ -152,7 +119,7 @@
           </div>
           <div class="media flex-wrap flex-sm-nowrap mb-8">
             <div class="mb-3 mb-sm-0 mr-sm-2 text-center w-100 w-sm-auto">
-              <img src="images/author-2.jpg" alt="Maggie Strickland">
+              <img src="images/author-2.jpg" alt="<?php echo $column['author']; ?>">
               <ul class="list-inline mb-0 mt-3">
                 <li class="list-inline-item mr-0">
                   <a href="#" class="text-muted fs-15 hover-dark lh-1 px-2"><i
@@ -173,10 +140,8 @@
               </ul>
             </div>
             <div class="media-body text-center text-sm-left">
-              <h5 class="text-dark fs-16 mb-2">Maggie Strickland</h5>
-              <p class="mb-0">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit
-                anim id est laboruLorem ipsum dolor sit amet datat non proident</p>
+              <h5 class="text-dark fs-16 mb-2"><?php echo $column['author']; ?></h5>
+              <p class="mb-0">Meet the author</p>
             </div>
           </div>
           <div class="row mb-7">
@@ -282,105 +247,11 @@
         </div>
       </div>
     </section>
+    <?php }?>
   </main>
-  <footer class="bg-dark pt-8 pb-6 footer text-muted">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-4 mb-6 mb-md-0">
-          <a class="d-block mb-2" href="#">
-            <img src="images/logo-white-primary.png" alt="Ngaru">
-          </a>
-          <div class="lh-26 font-weight-500">
-            <p class="mb-0">58 Howard Street #2 San Francisco</p>
-            <a class="d-block text-muted hover-white" href="mailto:contact@homeid.com">contact@homeid.com</a>
-            <a class="d-block text-lighter font-weight-bold fs-15 hover-white"
-                       href="tel:(+68)122109876">(+68)1221
-              09876</a>
-            <a class="d-block text-muted hover-white" href=".">www.homeid.com</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mb-6 mb-md-0">
-          <h4 class="text-white fs-16 my-4 font-weight-500">Popular Searches</h4>
-          <ul class="list-group list-group-flush list-group-no-border">
-            <li class="list-group-item bg-transparent p-0">
-              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Apartment for Rent</a>
-            </li>
-            <li class="list-group-item bg-transparent p-0">
-              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Apartment Low to
-                hide</a>
-            </li>
-            <li class="list-group-item bg-transparent p-0">
-              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Offices for Buy</a>
-            </li>
-            <li class="list-group-item bg-transparent p-0">
-              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Offices for Rent</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-2 mb-6 mb-md-0">
-          <h4 class="text-white fs-16 my-4 font-weight-500">Quick links</h4>
-          <ul class="list-group list-group-flush list-group-no-border">
-            <li class="list-group-item bg-transparent p-0">
-              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Terms of Use</a>
-            </li>
-            <li class="list-group-item bg-transparent p-0">
-              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Privacy Policy</a>
-            </li>
-            <li class="list-group-item bg-transparent p-0">
-              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Contact Support</a>
-            </li>
-            <li class="list-group-item bg-transparent p-0">
-              <a href="#" class="text-muted lh-26 hover-white font-weight-500">Careers</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-6 mb-md-0">
-          <h4 class="text-white fs-16 my-4 font-weight-500">Sign Up for Our Newsletter</h4>
-          <p class="font-weight-500 text-muted lh-184">Lorem ipsum dolor sit amet, consecte tur cing elit.
-            Suspe ndisse suscipit sagittis </p>
-          <form>
-            <div class="input-group input-group-lg mb-6">
-              <input type="text" name="email" required class="form-control bg-white shadow-none border-0 z-index-1" placeholder="Your email">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="submit">Subscribe</button>
-              </div>
-            </div>
-          </form>
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item mr-0">
-              <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
-                                class="fab fa-twitter"></i></a>
-            </li>
-            <li class="list-inline-item mr-0">
-              <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
-                                class="fab fa-facebook-f"></i></a>
-            </li>
-            <li class="list-inline-item mr-0">
-              <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
-                                class="fab fa-skype"></i></a>
-            </li>
-            <li class="list-inline-item mr-0">
-              <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
-                                class="fab fa-linkedin-in"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="mt-0 mt-md-10 row">
-        <ul class="list-inline mb-0 col-md-6 mr-auto">
-          <li class="list-inline-item mr-6">
-            <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Terms of Use</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Privacy Policy</a>
-          </li>
-        </ul>
-        <p class="col-md-auto mb-0 text-muted">
-          © 2020 homeID. All Rights Reserved
-        </p>
-      </div>
-    </div>
-  </footer>
+  <?php
+    include 'footer-v2.php'
+  ?>
   <!-- Vendors scripts -->
   <script src="vendors/jquery.min.js"></script>
   <script src="vendors/jquery-ui/jquery-ui.min.js"></script>
