@@ -557,8 +557,7 @@
          style="background-image: url('images/BG4.jpg');background-size: cover;background-position: center">
         <div class="container">
           <h1 class="fs-22 fs-md-42 lh-15 mb-8 mb-lg-13 font-weight-normal text-center mxw-774 pt-2 text-white position-relative z-index-3" data-animate="fadeInDown">
-            For more
-            information about our services, get in touch with our expert consultants</h1>
+          Seeking guidance on the buying process simply connect with our team, we are here to help.</h1>
         </div>
       </section>
       <section>
@@ -568,8 +567,9 @@
               <h2 class="text-heading mb-2 fs-22 fs-md-32 text-center lh-16">We're always eager to hear from
                 you!</h2>
               <p class="text-center mxw-670 mb-8">
-                Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscorem ipsum dolor sit ametcipsum
-                ipsumg consec tetur cing elitelit.
+              Our dedicated customer support team is ready to assist you. 
+              Feel free to reach out with any questions, concerns, or requests for information. 
+              We strive to respond promptly and provide the guidance you need.
               </p>
               <form class="mxw-751 px-md-5">
                 <div class="row">
@@ -619,62 +619,17 @@
                     <svg class="icon icon-f1"><use xlink:href="#icon-f1"></use></svg>
                   </span>
                   <div class="media-body">
-                    <h4 class="fs-22 lh-15 mb-0 text-heading">San Francisco</h4>
+                    <h4 class="fs-22 lh-15 mb-0 text-heading">Thika Town</h4>
                   </div>
                 </div>
                 <div class="card-body px-0 pt-3 pb-0">
                   <p class="card-text mb-0">
-                    58 Howard Street #2 San Francisco, CA 941
+                  Room 502, Equity Plaza, Thika Town
                   </p>
-                  <a href="tel:12390068668"
-                           class="d-block text-heading lh-2 hover-primary text-decoration-none">123 900
-                    68668</a>
-                  <a href="mailto:contact.sanfrancisco@homeid.com"
-                           class="d-block text-body hover-primary text-decoration-none">contact.sanfrancisco@homeid.com</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-6">
-              <div class="card border-0">
-                <div class="media align-items-end">
-                  <span class="text-primary fs-40 lh-1 d-inline-block mr-3">
-                    <svg class="icon icon-f2"><use xlink:href="#icon-f2"></use></svg>
-                  </span>
-                  <div class="media-body">
-                    <h4 class="fs-22 lh-15 mb-0 text-heading">New York</h4>
-                  </div>
-                </div>
-                <div class="card-body px-0 pt-3 pb-0">
-                  <p class="card-text mb-0">
-                    5685 Hunter Estates, New York
-                  </p>
-                  <a href="tel:123-900-68668"
-                           class="d-block text-heading lh-2 hover-primary text-decoration-none">123 900
-                    68668</a>
-                  <a href="mailto:contact.newyork@homeid.com"
-                           class="d-block text-body hover-primary text-decoration-none">contact.newyork@homeid.com</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-6">
-              <div class="card border-0">
-                <div class="media align-items-end">
-                  <span class="text-primary fs-40 lh-1 d-inline-block mr-3">
-                    <svg class="icon icon-f3"><use xlink:href="#icon-f3"></use></svg>
-                  </span>
-                  <div class="media-body">
-                    <h4 class="fs-22 lh-15 mb-0 text-heading">Russia</h4>
-                  </div>
-                </div>
-                <div class="card-body px-0 pt-3 pb-0">
-                  <p class="card-text mb-0">
-                    42 Lockman Gardens, Russia
-                  </p>
-                  <a href="tel:123-900-68668"
-                           class="d-block text-heading lh-2 hover-primary text-decoration-none">123 900
-                    68668</a>
-                  <a href="mailto:contact.russia@homeid.com"
-                           class="d-block text-body hover-primary text-decoration-none">contact.russia@homeid.com</a>
+                  <a href="tel:254746530530"
+                           class="d-block text-heading lh-2 hover-primary text-decoration-none">+254 746 530 530</a>
+                  <a href="mailto:ngarulogistics@gmail.com"
+                           class="d-block text-body hover-primary text-decoration-none">ngarulogistics@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -682,112 +637,14 @@
         </div>
       </section>
       <section>
-        <div id="map" class="mapbox-gl map-point-animate"
-         style="height: 550px"
-         data-mapbox-access-token="pk.eyJ1IjoiZHVvbmdsaCIsImEiOiJjanJnNHQ4czExMzhyNDVwdWo5bW13ZmtnIn0.f1bmXQsS6o4bzFFJc8RCcQ"
-         data-mapbox-options='{"center":[-73.981566, 40.739011],"setLngLat":[-73.981566, 40.739011]}'
-         data-mapbox-marker='[{"position":[-73.981566, 40.739011],"className":"marker","backgroundImage":"images/googlle-market-01.png","backgroundRepeat":"no-repeat","width":"32px","height":"40px"}]'
-    ></div>
+        <div id="map" class="mapbox-gl map-point-animate" style="height: 550px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1650788310744!2d37.070306375475184!3d-1.0368212354054038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4fc27d9275bb%3A0x14a45f7e02c3e12f!2sEquity%20plaza%2C%20Thika!5e0!3m2!1sen!2suk!4v1705935201029!5m2!1sen!2suk" width="2048" height="768" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
       </section>
     </main>
-    <footer class="bg-dark pt-8 pb-6 footer text-muted">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-6 mb-md-0">
-            <a class="d-block mb-2" href="#">
-              <img src="images/logo-white-primary.png" alt="Ngaru">
-            </a>
-            <div class="lh-26 font-weight-500">
-              <p class="mb-0">58 Howard Street #2 San Francisco</p>
-              <a class="d-block text-muted hover-white" href="mailto:contact@homeid.com">contact@homeid.com</a>
-              <a class="d-block text-lighter font-weight-bold fs-15 hover-white"
-                       href="tel:(+68)122109876">(+68)1221
-                09876</a>
-              <a class="d-block text-muted hover-white" href=".">www.homeid.com</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-2 mb-6 mb-md-0">
-            <h4 class="text-white fs-16 my-4 font-weight-500">Popular Searches</h4>
-            <ul class="list-group list-group-flush list-group-no-border">
-              <li class="list-group-item bg-transparent p-0">
-                <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Apartment for Rent</a>
-              </li>
-              <li class="list-group-item bg-transparent p-0">
-                <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Apartment Low to
-                  hide</a>
-              </li>
-              <li class="list-group-item bg-transparent p-0">
-                <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Offices for Buy</a>
-              </li>
-              <li class="list-group-item bg-transparent p-0">
-                <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Offices for Rent</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-6 col-lg-2 mb-6 mb-md-0">
-            <h4 class="text-white fs-16 my-4 font-weight-500">Quick links</h4>
-            <ul class="list-group list-group-flush list-group-no-border">
-              <li class="list-group-item bg-transparent p-0">
-                <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Terms of Use</a>
-              </li>
-              <li class="list-group-item bg-transparent p-0">
-                <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Privacy Policy</a>
-              </li>
-              <li class="list-group-item bg-transparent p-0">
-                <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Contact Support</a>
-              </li>
-              <li class="list-group-item bg-transparent p-0">
-                <a href="#" class="text-muted lh-26 hover-white font-weight-500">Careers</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-6 mb-md-0">
-            <h4 class="text-white fs-16 my-4 font-weight-500">Sign Up for Our Newsletter</h4>
-            <p class="font-weight-500 text-muted lh-184">Lorem ipsum dolor sit amet, consecte tur cing elit.
-              Suspe ndisse suscipit sagittis </p>
-            <form>
-              <div class="input-group input-group-lg mb-6">
-                <input type="text" name="email" required class="form-control bg-white shadow-none border-0 z-index-1" placeholder="Your email">
-                <div class="input-group-append">
-                  <button class="btn btn-primary" type="submit">Subscribe</button>
-                </div>
-              </div>
-            </form>
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item mr-0">
-                <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
-                                class="fab fa-twitter"></i></a>
-              </li>
-              <li class="list-inline-item mr-0">
-                <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
-                                class="fab fa-facebook-f"></i></a>
-              </li>
-              <li class="list-inline-item mr-0">
-                <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
-                                class="fab fa-skype"></i></a>
-              </li>
-              <li class="list-inline-item mr-0">
-                <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
-                                class="fab fa-linkedin-in"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-0 mt-md-10 row">
-          <ul class="list-inline mb-0 col-md-6 mr-auto">
-            <li class="list-inline-item mr-6">
-              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Terms of Use</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Privacy Policy</a>
-            </li>
-          </ul>
-          <p class="col-md-auto mb-0 text-muted">
-            © 2020 homeID. All Rights Reserved
-          </p>
-        </div>
-      </div>
-    </footer>
+    <?php
+      include 'footer.php'
+    ?>
     <!-- Vendors scripts -->
     <script src="vendors/jquery.min.js"></script>
     <script src="vendors/jquery-ui/jquery-ui.min.js"></script>

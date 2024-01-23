@@ -122,14 +122,15 @@
 
     $name = mysqli_real_escape_string($server, $_POST['name']);
     $address = mysqli_real_escape_string($server, $_POST['address']);
+    $description = mysqli_real_escape_string($server, $_POST['description']);
     $price = mysqli_real_escape_string($server, $_POST['price']);
     $deposit = mysqli_real_escape_string($server, $_POST['deposit']);
     $size = mysqli_real_escape_string($server, $_POST['size']);
     $featured = mysqli_real_escape_string($server, $_POST['featured']);
     $agent = mysqli_real_escape_string($server, $_POST['agent']);
 
-        $insert = mysqli_query($server, "INSERT INTO `properties`(`name`, `location`, `price`, `deposit`, `featured`, `size`, `agent`, `status`) 
-            VALUES ('$name', '$address', '$price', '$deposit', '$featured', '$size', '$agent', 1)") or die(mysqli_error($server));
+        $insert = mysqli_query($server, "INSERT INTO `properties`(`name`, `location`, `description`, `price`, `deposit`, `featured`, `size`, `agent`, `status`) 
+            VALUES ('$name', '$address', '$description', '$price', '$deposit', '$featured', '$size', '$agent', 1)") or die(mysqli_error($server));
             
             if ($insert) {
               echo "<div class='alert alert-success alert-dismissible' role='alert'>
@@ -163,6 +164,11 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Location*</label>
                     <input type="text" class="form-control" name="address" required="" placeholder="Location">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Description*</label>
+                    <textarea type="text" class="form-control" name="description" required="" rows="4" maxlength="1024">Enter description</textarea>
                 </div>
 
                 <div class="form-group">

@@ -130,6 +130,7 @@ if(isset($_GET['did']))
                         <th>ID</th>
                         <th>Plot Name</th>
                         <th>Location</th>
+                        <th>Description</th>
                         <th>Price</th>
                         <th>Deposit</th>
                         <th>Featured</th>
@@ -149,6 +150,7 @@ if(isset($_GET['did']))
                       <td>".$column['id']."</td>
                       <td>".$column['name']."</td>
                       <td>".$column['location']."</td>
+                      <td>".$column['description']."</td>
                       <td>".$column['price']."</td>
                       <td>".$column['deposit']."</td>
                       <td>".$column['featured']."</td>
@@ -179,6 +181,7 @@ if(isset($_GET['did']))
                         <th>ID</th>
                         <th>Plot Name</th>
                         <th>Location</th>
+                        <th>Description</th>
                         <th>Price</th>
                         <th>Deposit</th>
                         <th>Featured</th>

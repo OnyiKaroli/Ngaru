@@ -1,3 +1,6 @@
+<?php
+  require_once 'accounts/config/config.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -52,10 +55,10 @@
          style="background-image: url('images/bg-home-8.jpg')">
         <div class="container">
           <div data-animate="fadeInDown">
-            <p class="text-white letter-spacing-34 fs-15 text-uppercase lh-186 mb-0 pt-1">specialising in finding and creating the best value for </p>
+            <p class="text-white letter-spacing-34 fs-15 text-uppercase lh-186 mb-0 pt-1">Your Gateway to Prime Land Opportunities!</p>
             <h2 class="fs-md-42 text-white pt-5">
-            Our real estate clients in
-              <span class="fs-md-52 font-weight-bold text-white pt-2 d-block">Kenya</span>
+            Welcome to
+              <span class="fs-md-52 font-weight-bold text-white pt-2 d-block">Ngaru Logistics Ltd</span>
             </h2>
             <img class="mxw-180 d-block mx-auto mt-4 mb-1" src="images/line-01.png" alt="">
           </div>
@@ -87,7 +90,7 @@
                                 class="card-title fs-20 lh-1625 text-dark mb-1">Diaspora Investment Facilitation</h4>
                   </a>
                   <p class="card-text text-center">
-                    Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscipit
+                  We specialize in connecting diaspora investors with prime land opportunities.
                   </p>
                 </div>
               </div>
@@ -105,7 +108,7 @@
                                 class="card-title fs-20 lh-1625 text-dark mb-1">Residential and Commercial <br>Development</h4>
                   </a>
                   <p class="card-text text-center">
-                    Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscipit
+                  we have a diverse range of land options to suit your development goals.
                   </p>
                 </div>
               </div>
@@ -123,7 +126,7 @@
                                 class="card-title fs-20 lh-1625 text-dark mb-1">Ease of purchase</h4>
                   </a>
                   <p class="card-text text-center">
-                    Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscipit
+                  From transparent pricing and clear documentation to guidance on financing options.
                   </p>
                 </div>
               </div>
@@ -144,9 +147,9 @@
                   <div class="card border-0 text-white bg-overlay hover-zoom-in" data-animate="zoomIn">
                     <img src="images/properties-city-15.jpg" class="card-img" alt="New York">
                     <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
-                      <h2 class="mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">New York</a></h2>
+                      <h2 class="mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Thika</a></h2>
                       <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">FROM<span
-                                        class="ml-2 fs-15 font-weight-bold">$540.000 - $900.000</span>
+                                        class="ml-2 fs-15 font-weight-bold">Ksh 15.5M</span>
                       </p>
                     </div>
                   </div>
@@ -155,9 +158,9 @@
                   <div class="card border-0 text-white bg-overlay hover-zoom-in" data-animate="zoomIn">
                     <img src="images/properties-city-16.jpg" class="card-img" alt="New York">
                     <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
-                      <h2 class="mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Los Angeles</a></h2>
+                      <h2 class="mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Nakuru</a></h2>
                       <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">FROM<span
-                                        class="ml-2 fs-15 font-weight-bold">$340.000 - $600.000</span>
+                                        class="ml-2 fs-15 font-weight-bold">Ksh 0.95M</span>
                       </p>
                     </div>
                   </div>
@@ -166,9 +169,9 @@
                   <div class="card border-0 text-white bg-overlay hover-zoom-in" data-animate="zoomIn">
                     <img src="images/properties-city-17.jpg" class="card-img" alt="New York">
                     <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
-                      <h2 class="mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Chicago</a></h2>
+                      <h2 class="mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Ngong</a></h2>
                       <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">FROM<span
-                                        class="ml-2 fs-15 font-weight-bold">$310.000 - $700.000</span>
+                                        class="ml-2 fs-15 font-weight-bold">Ksh 1.9M</span>
                       </p>
                     </div>
                   </div>
@@ -177,9 +180,9 @@
                   <div class="card border-0 text-white bg-overlay hover-zoom-in" data-animate="zoomIn">
                     <img src="images/properties-city-18.jpg" class="card-img" alt="New York">
                     <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
-                      <h2 class="mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Las Vegas</a></h2>
+                      <h2 class="mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Kajiado</a></h2>
                       <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">FROM<span
-                                        class="ml-2 fs-15 font-weight-bold">$150.000 - $700.000</span>
+                                        class="ml-2 fs-15 font-weight-bold">Ksh 1.3M</span>
                       </p>
                     </div>
                   </div>
@@ -190,10 +193,10 @@
               <div class="card text-white bg-overlay hover-zoom-in" data-animate="zoomIn">
                 <img src="images/properties-city-14.jpg" class="card-img" alt="New York">
                 <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
-                  <h2 class="card-title mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Atlanta</a>
+                  <h2 class="card-title mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Nanyuki</a>
                   </h2>
                   <p class="card-text fs-13 font-weight-500 letter-spacing-087 mb-0">FROM<span
-                                class="ml-2 fs-15 font-weight-bold">$250.000 - $900.000</span>
+                                class="ml-2 fs-15 font-weight-bold">Ksh 0.45M</span>
                   </p>
                 </div>
               </div>
@@ -209,547 +212,54 @@
           <span class="heading-divider mx-auto mb-6"></span>
           <div class="slick-slider slick-dots-mt-0"
              data-slick-options='{"slidesToShow": 4, "autoplay":true,"dots":true,"arrows":false,"responsive":[{"breakpoint": 1600,"settings": {"slidesToShow":3}},{"breakpoint": 992,"settings": {"slidesToShow":2}},{"breakpoint": 768,"settings": {"slidesToShow": 2,"autoplay":true}},{"breakpoint": 576,"settings": {"slidesToShow": 1,"autoplay":true}}]}'>
-            <div class="box pt-2 pb-4" data-animate="fadeInUp">
+            <?php 
+              $select = mysqli_query($server, "SELECT * FROM `properties` ORDER BY `id` ASC LIMIT 7") or die(mysqli_error($server));
+              while ($row = mysqli_fetch_assoc($select)) {
+            ?>
+             <div class="box pt-2 pb-4" data-animate="fadeInUp">
               <div class="card shadow-hover-xs-2">
                 <div class="card-header bg-transparent px-4 pt-4 pb-3 card-img">
-                  <h2 class="fs-16 lh-2 mb-0"><a href="single-property-1.html"
-                                                       class="text-dark hover-primary">Home in Metric Way</a></h2>
-                  <p class="font-weight-500 text-gray-light mb-3">1421 San Pedro St, Los Angeles</p>
+                  <h2 class="fs-16 lh-2 mb-0">
+                  <?php echo "<a href='single-property?did=".$row['id']."' class='text-dark hover-primary'>".$row['name']."</a>";?>
+                  </h2>
+                  <p class="font-weight-500 text-gray-light mb-3"><?php echo $row['location']; ?></p>
                   <div class="hover-change-image bg-hover-overlay rounded-lg">
                     <img src="images/properties-grid-31.jpg"
                                  alt="Home in Metric Way">
                     <div class="card-img-overlay d-flex flex-column">
-                      <div><span class="badge badge-orange">Featured</span></div>
-                      <div class="mt-auto d-flex hover-image">
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-auto">
-                          <li class="list-inline-item mr-2" data-toggle="tooltip" title="9 Images">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-images"></i><span class="pl-1">9</span>
-                            </a>
-                          </li>
-                          <li class="list-inline-item" data-toggle="tooltip" title="2 Video">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-play-circle"></i><span class="pl-1">2</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-n3">
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Wishlist">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="far fa-heart"></i>
-                            </a>
-                          </li>
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Compare">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="fas fa-exchange-alt"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
+                      <div><span class="badge badge-orange">Deposit Ksh<?php echo $row['deposit']; ?></span></div>
                     </div>
                   </div>
                   <div class="d-flex justify-content-between align-items-center pt-3">
-                    <p class="fs-17 font-weight-bold text-heading mb-0 lh-1">$1.250.000</p>
-                    <span class="badge badge-primary">For Sale</span>
+                    <p class="fs-17 font-weight-bold text-heading mb-0 lh-1">Ksh <?php echo $row['price']; ?></p>
+                    <span class="badge badge-primary">
+                      <?php
+                        $type = $row['type'];
+                        if ($type == 1) {
+                          echo "Residential";
+                        } else {
+                          echo "Commercial";
+                        }                        
+                      ?>
+                    </span>
                   </div>
                 </div>
                 <div class="card-body py-2">
-                  <p class="mb-0">Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem</p>
+                  <p class="mb-0"><?php echo $row['description']; ?></p>
                 </div>
                 <div class="card-footer bg-transparent pt-3 pb-4 pb-3">
                   <ul class="list-inline d-flex justify-content-between mb-0 flex-wrap">
                     <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-bedroom fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-bedroom"></use>
-                      </svg>
-                      3 Br
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-shower fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-shower"></use>
-                      </svg>
-                      3 Ba
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
                       <svg class="icon icon-square fs-18 text-primary mr-1">
                         <use xlink:href="#icon-square"></use>
                       </svg>
-                      2300 Sq.Ft
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-Garage"></use>
-                      </svg>
-                      1 Gr
+                      <?php echo $row['size']; ?> Acres
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="box pt-2 pb-4" data-animate="fadeInUp">
-              <div class="card shadow-hover-xs-2">
-                <div class="card-header bg-transparent px-4 pt-4 pb-3 card-img">
-                  <h2 class="fs-16 lh-2 mb-0"><a href="single-property-1.html"
-                                                       class="text-dark hover-primary">Home in Metric Way</a></h2>
-                  <p class="font-weight-500 text-gray-light mb-3">1421 San Pedro St, Los Angeles</p>
-                  <div class="hover-change-image bg-hover-overlay rounded-lg">
-                    <img src="images/properties-grid-32.jpg"
-                                 alt="Home in Metric Way">
-                    <div class="card-img-overlay d-flex flex-column">
-                      <div class="mt-auto d-flex hover-image">
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-auto">
-                          <li class="list-inline-item mr-2" data-toggle="tooltip" title="9 Images">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-images"></i><span class="pl-1">9</span>
-                            </a>
-                          </li>
-                          <li class="list-inline-item" data-toggle="tooltip" title="2 Video">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-play-circle"></i><span class="pl-1">2</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-n3">
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Wishlist">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="far fa-heart"></i>
-                            </a>
-                          </li>
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Compare">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="fas fa-exchange-alt"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-between align-items-center pt-3">
-                    <p class="fs-17 font-weight-bold text-heading mb-0 lh-1">$1.250.000</p>
-                    <span class="badge badge-primary">For Sale</span>
-                  </div>
-                </div>
-                <div class="card-body py-2">
-                  <p class="mb-0">Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem</p>
-                </div>
-                <div class="card-footer bg-transparent pt-3 pb-4 pb-3">
-                  <ul class="list-inline d-flex justify-content-between mb-0 flex-wrap">
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-bedroom fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-bedroom"></use>
-                      </svg>
-                      3 Br
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-shower fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-shower"></use>
-                      </svg>
-                      3 Ba
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-square fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-square"></use>
-                      </svg>
-                      2300 Sq.Ft
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-Garage"></use>
-                      </svg>
-                      1 Gr
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="box pt-2 pb-4" data-animate="fadeInUp">
-              <div class="card shadow-hover-xs-2">
-                <div class="card-header bg-transparent px-4 pt-4 pb-3 card-img">
-                  <h2 class="fs-16 lh-2 mb-0"><a href="single-property-1.html"
-                                                       class="text-dark hover-primary">Home in Metric Way</a></h2>
-                  <p class="font-weight-500 text-gray-light mb-3">1421 San Pedro St, Los Angeles</p>
-                  <div class="hover-change-image bg-hover-overlay rounded-lg">
-                    <img src="images/properties-grid-33.jpg"
-                                 alt="Home in Metric Way">
-                    <div class="card-img-overlay d-flex flex-column">
-                      <div><span class="badge badge-orange">Featured</span></div>
-                      <div class="mt-auto d-flex hover-image">
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-auto">
-                          <li class="list-inline-item mr-2" data-toggle="tooltip" title="9 Images">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-images"></i><span class="pl-1">9</span>
-                            </a>
-                          </li>
-                          <li class="list-inline-item" data-toggle="tooltip" title="2 Video">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-play-circle"></i><span class="pl-1">2</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-n3">
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Wishlist">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="far fa-heart"></i>
-                            </a>
-                          </li>
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Compare">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="fas fa-exchange-alt"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-between align-items-center pt-3">
-                    <p class="fs-17 font-weight-bold text-heading mb-0 lh-1">$5.700<span
-                                    class="text-gray-light font-weight-500 fs-14"> / year</span></p>
-                    <span class="badge badge-indigo">For Rent</span>
-                  </div>
-                </div>
-                <div class="card-body py-2">
-                  <p class="mb-0">Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem</p>
-                </div>
-                <div class="card-footer bg-transparent pt-3 pb-4 pb-3">
-                  <ul class="list-inline d-flex justify-content-between mb-0 flex-wrap">
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-bedroom fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-bedroom"></use>
-                      </svg>
-                      3 Br
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-shower fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-shower"></use>
-                      </svg>
-                      3 Ba
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-square fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-square"></use>
-                      </svg>
-                      2300 Sq.Ft
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-Garage"></use>
-                      </svg>
-                      1 Gr
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="box pt-2 pb-4" data-animate="fadeInUp">
-              <div class="card shadow-hover-xs-2">
-                <div class="card-header bg-transparent px-4 pt-4 pb-3 card-img">
-                  <h2 class="fs-16 lh-2 mb-0"><a href="single-property-1.html"
-                                                       class="text-dark hover-primary">Home in Metric Way</a></h2>
-                  <p class="font-weight-500 text-gray-light mb-3">1421 San Pedro St, Los Angeles</p>
-                  <div class="hover-change-image bg-hover-overlay rounded-lg">
-                    <img src="images/properties-grid-34.jpg"
-                                 alt="Home in Metric Way">
-                    <div class="card-img-overlay d-flex flex-column">
-                      <div><span class="badge badge-orange">Featured</span></div>
-                      <div class="mt-auto d-flex hover-image">
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-auto">
-                          <li class="list-inline-item mr-2" data-toggle="tooltip" title="9 Images">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-images"></i><span class="pl-1">9</span>
-                            </a>
-                          </li>
-                          <li class="list-inline-item" data-toggle="tooltip" title="2 Video">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-play-circle"></i><span class="pl-1">2</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-n3">
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Wishlist">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="far fa-heart"></i>
-                            </a>
-                          </li>
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Compare">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="fas fa-exchange-alt"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-between align-items-center pt-3">
-                    <p class="fs-17 font-weight-bold text-heading mb-0 lh-1">$5.700<span
-                                    class="text-gray-light font-weight-500 fs-14"> / year</span></p>
-                    <span class="badge badge-indigo">For Rent</span>
-                  </div>
-                </div>
-                <div class="card-body py-2">
-                  <p class="mb-0">Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem</p>
-                </div>
-                <div class="card-footer bg-transparent pt-3 pb-4 pb-3">
-                  <ul class="list-inline d-flex justify-content-between mb-0 flex-wrap">
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-bedroom fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-bedroom"></use>
-                      </svg>
-                      3 Br
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-shower fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-shower"></use>
-                      </svg>
-                      3 Ba
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-square fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-square"></use>
-                      </svg>
-                      2300 Sq.Ft
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-Garage"></use>
-                      </svg>
-                      1 Gr
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="box pt-2 pb-4" data-animate="fadeInUp">
-              <div class="card shadow-hover-xs-2">
-                <div class="card-header bg-transparent px-4 pt-4 pb-3 card-img">
-                  <h2 class="fs-16 lh-2 mb-0"><a href="single-property-1.html"
-                                                       class="text-dark hover-primary">Home in Metric Way</a></h2>
-                  <p class="font-weight-500 text-gray-light mb-3">1421 San Pedro St, Los Angeles</p>
-                  <div class="hover-change-image bg-hover-overlay rounded-lg">
-                    <img src="images/properties-grid-32.jpg"
-                                 alt="Home in Metric Way">
-                    <div class="card-img-overlay d-flex flex-column">
-                      <div class="mt-auto d-flex hover-image">
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-auto">
-                          <li class="list-inline-item mr-2" data-toggle="tooltip" title="9 Images">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-images"></i><span class="pl-1">9</span>
-                            </a>
-                          </li>
-                          <li class="list-inline-item" data-toggle="tooltip" title="2 Video">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-play-circle"></i><span class="pl-1">2</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-n3">
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Wishlist">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="far fa-heart"></i>
-                            </a>
-                          </li>
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Compare">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="fas fa-exchange-alt"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-between align-items-center pt-3">
-                    <p class="fs-17 font-weight-bold text-heading mb-0 lh-1">$1.250.000</p>
-                    <span class="badge badge-primary">For Sale</span>
-                  </div>
-                </div>
-                <div class="card-body py-2">
-                  <p class="mb-0">Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem</p>
-                </div>
-                <div class="card-footer bg-transparent pt-3 pb-4 pb-3">
-                  <ul class="list-inline d-flex justify-content-between mb-0 flex-wrap">
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-bedroom fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-bedroom"></use>
-                      </svg>
-                      3 Br
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-shower fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-shower"></use>
-                      </svg>
-                      3 Ba
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-square fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-square"></use>
-                      </svg>
-                      2300 Sq.Ft
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-Garage"></use>
-                      </svg>
-                      1 Gr
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="box pt-2 pb-4" data-animate="fadeInUp">
-              <div class="card shadow-hover-xs-2">
-                <div class="card-header bg-transparent px-4 pt-4 pb-3 card-img">
-                  <h2 class="fs-16 lh-2 mb-0"><a href="single-property-1.html"
-                                                       class="text-dark hover-primary">Home in Metric Way</a></h2>
-                  <p class="font-weight-500 text-gray-light mb-3">1421 San Pedro St, Los Angeles</p>
-                  <div class="hover-change-image bg-hover-overlay rounded-lg">
-                    <img src="images/properties-grid-33.jpg"
-                                 alt="Home in Metric Way">
-                    <div class="card-img-overlay d-flex flex-column">
-                      <div><span class="badge badge-orange">Featured</span></div>
-                      <div class="mt-auto d-flex hover-image">
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-auto">
-                          <li class="list-inline-item mr-2" data-toggle="tooltip" title="9 Images">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-images"></i><span class="pl-1">9</span>
-                            </a>
-                          </li>
-                          <li class="list-inline-item" data-toggle="tooltip" title="2 Video">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-play-circle"></i><span class="pl-1">2</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-n3">
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Wishlist">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="far fa-heart"></i>
-                            </a>
-                          </li>
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Compare">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="fas fa-exchange-alt"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-between align-items-center pt-3">
-                    <p class="fs-17 font-weight-bold text-heading mb-0 lh-1">$5.700<span
-                                    class="text-gray-light font-weight-500 fs-14"> / year</span></p>
-                    <span class="badge badge-indigo">For Rent</span>
-                  </div>
-                </div>
-                <div class="card-body py-2">
-                  <p class="mb-0">Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem</p>
-                </div>
-                <div class="card-footer bg-transparent pt-3 pb-4 pb-3">
-                  <ul class="list-inline d-flex justify-content-between mb-0 flex-wrap">
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-bedroom fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-bedroom"></use>
-                      </svg>
-                      3 Br
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-shower fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-shower"></use>
-                      </svg>
-                      3 Ba
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-square fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-square"></use>
-                      </svg>
-                      2300 Sq.Ft
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-Garage"></use>
-                      </svg>
-                      1 Gr
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="box pt-2 pb-4" data-animate="fadeInUp">
-              <div class="card shadow-hover-xs-2">
-                <div class="card-header bg-transparent px-4 pt-4 pb-3 card-img">
-                  <h2 class="fs-16 lh-2 mb-0"><a href="single-property-1.html"
-                                                       class="text-dark hover-primary">Home in Metric Way</a></h2>
-                  <p class="font-weight-500 text-gray-light mb-3">1421 San Pedro St, Los Angeles</p>
-                  <div class="hover-change-image bg-hover-overlay rounded-lg">
-                    <img src="images/properties-grid-34.jpg"
-                                 alt="Home in Metric Way">
-                    <div class="card-img-overlay d-flex flex-column">
-                      <div><span class="badge badge-orange">Featured</span></div>
-                      <div class="mt-auto d-flex hover-image">
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-auto">
-                          <li class="list-inline-item mr-2" data-toggle="tooltip" title="9 Images">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-images"></i><span class="pl-1">9</span>
-                            </a>
-                          </li>
-                          <li class="list-inline-item" data-toggle="tooltip" title="2 Video">
-                            <a href="#" class="text-white hover-primary">
-                              <i class="far fa-play-circle"></i><span class="pl-1">2</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <ul class="list-inline mb-0 d-flex align-items-end mr-n3">
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Wishlist">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="far fa-heart"></i>
-                            </a>
-                          </li>
-                          <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="Compare">
-                            <a href="#" class="text-white fs-20 hover-primary">
-                              <i class="fas fa-exchange-alt"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-between align-items-center pt-3">
-                    <p class="fs-17 font-weight-bold text-heading mb-0 lh-1">$5.700<span
-                                    class="text-gray-light font-weight-500 fs-14"> / year</span></p>
-                    <span class="badge badge-indigo">For Rent</span>
-                  </div>
-                </div>
-                <div class="card-body py-2">
-                  <p class="mb-0">Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem</p>
-                </div>
-                <div class="card-footer bg-transparent pt-3 pb-4 pb-3">
-                  <ul class="list-inline d-flex justify-content-between mb-0 flex-wrap">
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-bedroom fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-bedroom"></use>
-                      </svg>
-                      3 Br
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-shower fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-shower"></use>
-                      </svg>
-                      3 Ba
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-square fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-square"></use>
-                      </svg>
-                      2300 Sq.Ft
-                    </li>
-                    <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center">
-                      <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                        <use xlink:href="#icon-Garage"></use>
-                      </svg>
-                      1 Gr
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <?php }?>
           </div>
         </div>
       </section>
@@ -765,8 +275,8 @@
                   <img src="images/house.png" alt="Property Management">
                 </div>
                 <div class="card-body px-0 pt-5 pb-0 text-center">
-                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Property Management</h4>
-                  <p class="card-text text-body px-8">Suspe ndisse suscipit sagittis leo sit met condim entum</p>
+                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Property Listings</h4>
+                  <p class="card-text text-body px-8">Our detailed listings provide comprehensive information, including property size, location, zoning details, and more.</p>
                 </div>
               </div>
             </div>
@@ -776,8 +286,8 @@
                   <img src="images/mortgage.png" alt="Mortgage Service">
                 </div>
                 <div class="card-body px-0 pt-5 pb-0 text-center">
-                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Mortgage Service</h4>
-                  <p class="card-text text-body px-8">Suspe ndisse suscipit sagittis leo sit met condim entum</p>
+                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Development Opportunities</h4>
+                  <p class="card-text text-body px-8">Whether you're planning to build your dream home or embark on a commercial development project, we have the right land options for you.</p>
                 </div>
               </div>
             </div>
@@ -787,8 +297,8 @@
                   <img src="images/clipboard.png" alt="Consulting Service">
                 </div>
                 <div class="card-body px-0 pt-5 pb-0 text-center">
-                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Consulting Service</h4>
-                  <p class="card-text text-body px-8">Suspe ndisse suscipit sagittis leo sit met condim entum</p>
+                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Legal Guidance</h4>
+                  <p class="card-text text-body px-8">Our team can provide guidance on zoning regulations, property titles, and legal procedures to ensure a smooth and compliant transaction.</p>
                 </div>
               </div>
             </div>
@@ -799,18 +309,7 @@
                 </div>
                 <div class="card-body px-0 pt-5 pb-0 text-center">
                   <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Recover Asset Value</h4>
-                  <p class="card-text text-body px-8">Suspe ndisse suscipit sagittis leo sit met condim entum</p>
-                </div>
-              </div>
-            </div>
-            <div class="box px-0 py-6" data-animate="fadeInUp">
-              <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
-                <div class="d-flex justify-content-center card-img-top">
-                  <img src="images/house.png" alt="Property Management">
-                </div>
-                <div class="card-body px-0 pt-5 pb-0 text-center">
-                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Property Management</h4>
-                  <p class="card-text text-body px-8">Suspe ndisse suscipit sagittis leo sit met condim entum</p>
+                  <p class="card-text text-body px-8">Explore our services and let us help you find the perfect piece of land for your unique goals.</p>
                 </div>
               </div>
             </div>
@@ -841,9 +340,9 @@
                   <div class="card-body px-5 pt-3 pb-5">
                     <p class="mb-1 fs-13">Dec 16, 2020</p>
                     <h3 class="fs-18 text-heading lh-194 mb-1">
-                      <a href="blog-single" class="text-heading hover-primary">The Interior Design The Hall On str. Filimonovo</a>
+                      <a href="blog-single" class="text-heading hover-primary">Navigating Zoning Regulations: A Guide for Land Buyers</a>
                     </h3>
-                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur cing elit. Suspe ndisse suscipit sagittis leo sit met condimentum estibulum issim</p>
+                    <p class="mb-3">Zoning laws dictate how land can be used, affecting everything from residential to commercial developments.</p>
                     <a class="text-heading font-weight-500" href="blog-single">Learn more <i
                                     class="far fa-long-arrow-right text-primary ml-1"></i></a>
                   </div>
@@ -864,9 +363,9 @@
                   <div class="card-body px-5 pt-3 pb-5">
                     <p class="mb-1 fs-13">Dec 16, 2020</p>
                     <h3 class="fs-18 text-heading lh-194 mb-1">
-                      <a href="blog-single" class="text-heading hover-primary">Ten Benefits Of Rentals That May Change Your Perspective</a>
+                      <a href="blog-single" class="text-heading hover-primary">Investing in Land from Afar: A Diaspora Perspective</a>
                     </h3>
-                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur cing elit. Suspe ndisse suscipit sagittis leo sit met condimentum estibulum issim</p>
+                    <p class="mb-3">For members of the diaspora looking to invest in land in their home country, the journey involves unique challenges and opportunities. </p>
                     <a class="text-heading font-weight-500" href="blog-single">Learn more <i
                                     class="far fa-long-arrow-right text-primary ml-1"></i></a>
                   </div>
@@ -887,9 +386,9 @@
                   <div class="card-body px-5 pt-3 pb-5">
                     <p class="mb-1 fs-13">Dec 16, 2020</p>
                     <h3 class="fs-18 text-heading lh-194 mb-1">
-                      <a href="blog-single" class="text-heading hover-primary">Future Office Buldings Intelligent by Design</a>
+                      <a href="blog-single" class="text-heading hover-primary">The Future of Residential Development: Trends in Land Buying</a>
                     </h3>
-                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur cing elit. Suspe ndisse suscipit sagittis leo sit met condimentum estibulum issim</p>
+                    <p class="mb-3">The residential development landscape is continually evolving, driven by changing preferences and emerging trends.</p>
                     <a class="text-heading font-weight-500" href="blog-single">Learn more <i
                                     class="far fa-long-arrow-right text-primary ml-1"></i></a>
                   </div>
@@ -910,9 +409,9 @@
                   <div class="card-body px-5 pt-3 pb-5">
                     <p class="mb-1 fs-13">Dec 16, 2020</p>
                     <h3 class="fs-18 text-heading lh-194 mb-1">
-                      <a href="blog-single" class="text-heading hover-primary">The Interior Design The Hall On str. Filimonovo</a>
+                      <a href="blog-single" class="text-heading hover-primary">Commercial Land Investment Strategies for Entrepreneurs</a>
                     </h3>
-                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur cing elit. Suspe ndisse suscipit sagittis leo sit met condimentum estibulum issim</p>
+                    <p class="mb-3">We'll provide insights into location analysis, market trends, and potential return on investment (ROI) for different types of commercial developments.</p>
                     <a class="text-heading font-weight-500" href="blog-single">Learn more <i
                                     class="far fa-long-arrow-right text-primary ml-1"></i></a>
                   </div>
@@ -933,32 +432,9 @@
                   <div class="card-body px-5 pt-3 pb-5">
                     <p class="mb-1 fs-13">Dec 16, 2020</p>
                     <h3 class="fs-18 text-heading lh-194 mb-1">
-                      <a href="blog-single" class="text-heading hover-primary">Ten Benefits Of Rentals That May Change Your Perspective</a>
+                      <a href="blog-single" class="text-heading hover-primary">Making Your Dream Home a Reality: Tips for Residential Land Buyers</a>
                     </h3>
-                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur cing elit. Suspe ndisse suscipit sagittis leo sit met condimentum estibulum issim</p>
-                    <a class="text-heading font-weight-500" href="blog-single">Learn more <i
-                                    class="far fa-long-arrow-right text-primary ml-1"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="item py-4" data-animate="fadeInUp">
-                <div class="card border-0 shadow-xxs-3">
-                  <div class="position-relative d-flex align-items-end card-img-top">
-                    <a href="blog-single" class="hover-shine">
-                      <img src="images/post-07.jpg"
-                                     alt="Future Office Buldings Intelligent by Design">
-                    </a>
-                    <a href="#"
-                               class="badge pos-fixed-bottom text-white bg-dark-opacity-04 fs-13 font-weight-500 bg-hover-primary hover-white mx-2 my-4 position-absolute">
-                      Rentals
-                    </a>
-                  </div>
-                  <div class="card-body px-5 pt-3 pb-5">
-                    <p class="mb-1 fs-13">Dec 16, 2020</p>
-                    <h3 class="fs-18 text-heading lh-194 mb-1">
-                      <a href="blog-single" class="text-heading hover-primary">Future Office Buldings Intelligent by Design</a>
-                    </h3>
-                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur cing elit. Suspe ndisse suscipit sagittis leo sit met condimentum estibulum issim</p>
+                    <p class="mb-3">Buying land for your dream home is a significant and often emotional journey. This blog post will explore the practical and ...</p>
                     <a class="text-heading font-weight-500" href="blog-single">Learn more <i
                                     class="far fa-long-arrow-right text-primary ml-1"></i></a>
                   </div>
@@ -1001,15 +477,13 @@
             <div class="col-lg-6 offset-xl-1 custom-lg-map-height-full pr-lg-0 pt-8 pt-lg-0">
               <div class="h-lg-full">
                 <div class="position-relative h-lg-full">
-                  <div id="map" class="mapbox-gl h-lg-full mx-n3 mx-lg-0 map-point-animate"
-                         data-mapbox-access-token="pk.eyJ1IjoiZHVvbmdsaCIsImEiOiJjanJnNHQ4czExMzhyNDVwdWo5bW13ZmtnIn0.f1bmXQsS6o4bzFFJc8RCcQ"
-                         data-mapbox-options='{"center":[-73.9927227, 40.6741035],"setLngLat":[-73.9927227, 40.6741035]}'
-                         data-mapbox-marker='[{"position":[-73.9927227, 40.6741035],"className":"marker","backgroundImage":"images/googlle-market-01.png","backgroundRepeat":"no-repeat","width":"30px","height":"40px"}]'>
+                  <div id="map" class="mapbox-gl h-lg-full mx-n3 mx-lg-0 map-point-animate">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1650788310744!2d37.070306375475184!3d-1.0368212354054038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4fc27d9275bb%3A0x14a45f7e02c3e12f!2sEquity%20plaza%2C%20Thika!5e0!3m2!1sen!2suk!4v1705935201029!5m2!1sen!2suk" width="2048" height="768" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                   </div>
                   <div class="mb-0 p-3 bg-white shadow rounded-lg position-absolute pos-fixed-bottom mb-4 ml-4 mb-lg-8 ml-lg-9 lh-17">
                     <h4 class="fs-18 text-dark">Visit our office at</h4>
-                    <p>62 Gresham St, Victoria Park <br/>
-                       WA 6100, Australia</p>
+                    <p>Room 502, Equity Plaza <br/>
+                       Thika, Kiambu</p>
                   </div>
                 </div>
               </div>

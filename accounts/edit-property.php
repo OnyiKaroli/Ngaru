@@ -1,5 +1,5 @@
 <?php
-$edit_id = $_GET['aid'];
+  $edit_id = $_GET['aid'];
   require_once 'config/config.php';
   unset($_SESSION['user']['client_ses']);
 
@@ -122,6 +122,7 @@ $edit_id = $_GET['aid'];
     $edit_id = $_GET['aid'];
     $name = mysqli_real_escape_string($server, $_POST['name']);
     $address = mysqli_real_escape_string($server, $_POST['address']);
+    $description = mysqli_real_escape_string($server, $_POST['description']);
     $price = mysqli_real_escape_string($server, $_POST['price']);
     $deposit = mysqli_real_escape_string($server, $_POST['deposit']);
     $size = mysqli_real_escape_string($server, $_POST['size']);
@@ -129,7 +130,7 @@ $edit_id = $_GET['aid'];
     $status = mysqli_real_escape_string($server, $_POST['status']);
     $agent = mysqli_real_escape_string($server, $_POST['agent']);
 
-        $insert = mysqli_query($server, "UPDATE `properties` SET `name`='$name',`location`='$address',`price`='$price',`deposit`='$deposit',`featured`='$featured',`size`='$size',`agent`='$agent',`status`='$status' WHERE `id` = '$edit_id'") or die(mysqli_error($server));
+        $insert = mysqli_query($server, "UPDATE `properties` SET `name`='$name',`location`='$address', `description`='$description', `price`='$price',`deposit`='$deposit',`featured`='$featured',`size`='$size',`agent`='$agent',`status`='$status' WHERE `id` = '$edit_id'") or die(mysqli_error($server));
             
             if ($insert) {
               echo "<div class='alert alert-success alert-dismissible' role='alert'>
@@ -170,6 +171,11 @@ $edit_id = $_GET['aid'];
                 <div class="form-group">
                     <label for="exampleInputEmail1">Location*</label>
                     <input type="text" class="form-control" name="address" required="" placeholder="<?php echo $column['location']; ?>">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Description*</label>
+                    <textarea type="text" class="form-control" name="description" required="" rows="4" maxlength="1024"><?php echo $column['description']; ?></textarea>
                 </div>
 
                 <div class="form-group">

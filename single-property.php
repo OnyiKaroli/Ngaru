@@ -1,3 +1,8 @@
+<?php
+  $view_id = $_GET['did'];
+  require_once 'accounts/config/config.php';
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,7 +11,7 @@
     <meta name="description" content="Ngaru Logistics Ltd">
     <meta name="author" content="">
     <meta name="generator" content="Jekyll">
-    <title>Single Property 3 - Ngaru</title>
+    <title>View Property - Ngaru</title>
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet">
@@ -48,108 +53,11 @@
       include 'header.php'
     ?>
     <main id="content">
-      <section class="bg-secondary py-6 py-lg-0">
-        <div class="container">
-          <form class="search-form d-none d-lg-block">
-            <div class="row align-items-center">
-              <div class="col-lg-5">
-                <div class="row">
-                  <div class="col-md-6">
-                    <label class="text-uppercase font-weight-500 opacity-7 text-white letter-spacing-093 mb-1">Home
-                      Type</label>
-                    <select class="form-control selectpicker bg-transparent border-bottom rounded-0 border-input-opacity-02"
-                                    name="type"
-                                    title="Select" data-style="p-0 h-24 lh-17 text-white">
-                      <option>Condominium</option>
-                      <option>Single-Family Home</option>
-                      <option>Townhouse</option>
-                      <option>Multi-Family Home</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 pl-md-3 pt-md-0 pt-6">
-                    <label class="text-uppercase font-weight-500 opacity-7 text-white letter-spacing-093 mb-1">Location</label>
-                    <select class="form-control selectpicker bg-transparent border-bottom rounded-0 border-input-opacity-02"
-                                    name="location"
-                                    title="Select" data-style="p-0 h-24 lh-17 text-white">
-                      <option>Austin</option>
-                      <option>Boston</option>
-                      <option>Chicago</option>
-                      <option>Denver</option>
-                      <option>Los Angeles</option>
-                      <option>New York</option>
-                      <option>San Francisco</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-lg-5 pt-lg-0 pt-6">
-                <label class="text-uppercase font-weight-500 opacity-7 text-white letter-spacing-093">Search</label>
-                <div class="position-relative">
-                  <input type="text" name="search"
-                               class="form-control bg-transparent shadow-none border-top-0 border-right-0 border-left-0 border-bottom rounded-0 h-24 lh-17 p-0 pr-md-5 text-white placeholder-light font-weight-500 border-input-opacity-02"
-                               placeholder="Enter an address, neighbourhood...">
-                  <i class="far fa-search position-absolute pos-fixed-right-center pr-0 fs-18 text-white pb-2 d-none d-md-block"></i>
-                </div>
-              </div>
-              <div class="col-12 col-lg-2 pt-lg-0 pt-7">
-                <button type="submit"
-                            class="btn bg-white-opacity-01 bg-white-hover-opacity-03 h-lg-100 w-100 shadow-none text-white rounded-0 fs-16 font-weight-600">
-                  Search
-                </button>
-              </div>
-            </div>
-          </form>
-          <form class="property-search property-search-mobile d-lg-none">
-            <div class="row align-items-lg-center" id="accordion-mobile">
-              <div class="col-12">
-                <div class="form-group mb-0 position-relative">
-                  <a href="#advanced-search-filters-mobile"
-                           class="icon-primary btn advanced-search shadow-none pr-3 pl-0 d-flex align-items-center position-absolute pos-fixed-left-center py-0 h-100 border-right collapsed"
-                           data-toggle="collapse" data-target="#advanced-search-filters-mobile"
-                           aria-expanded="true"
-                           aria-controls="advanced-search-filters-mobile">
-                  </a>
-                  <input type="text"
-                               class="form-control form-control-lg border-0 shadow-none pr-9 pl-11 bg-white placeholder-muted"
-                               name="key-word"
-                               placeholder="Search...">
-                  <button type="submit"
-                                class="btn position-absolute pos-fixed-right-center p-0 text-heading fs-20 px-3 shadow-none h-100 border-left bg-white">
-                    <i class="far fa-search"></i>
-                  </button>
-                </div>
-              </div>
-              <div id="advanced-search-filters-mobile" class="col-12 pt-2 collapse"
-                     data-parent="#accordion-mobile">
-                <div class="row mx-n2">
-                  <div class="col-sm-6 pt-4 px-2">
-                    <select class="form-control border-0 shadow-none form-control-lg selectpicker bg-white"
-                                    title="Home Types" data-style="btn-lg py-2 h-52 bg-white" name="type">
-                      <option>Condominium</option>
-                      <option>Single-Family Home</option>
-                      <option>Townhouse</option>
-                      <option>Multi-Family Home</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-6 pt-4 px-2">
-                    <select class="form-control border-0 shadow-none form-control-lg selectpicker bg-white"
-                                    name="bedroom"
-                                    title="Location" data-style="btn-lg py-2 h-52 bg-white">
-                      <option>Austin</option>
-                      <option>Boston</option>
-                      <option>Chicago</option>
-                      <option>Denver</option>
-                      <option>Los Angeles</option>
-                      <option>New York</option>
-                      <option>San Francisco</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
+      <?php
+        $select = mysqli_query($server, "SELECT * FROM `properties` WHERE `id`='$view_id'") or die('Mysql Error');
+
+            while ($row=mysqli_fetch_assoc($select)) {
+      ?>
       <section class="pb-7 shadow-5">
         <div class="container">
           <nav aria-label="breadcrumb">
@@ -158,65 +66,67 @@
                 <a href=".">Home</a>
               </li>
               <li class="breadcrumb-item fs-12 letter-spacing-087">
-                <a href="listing-grid-with-left-filter.html">Listing</a>
+                <a href="listing">Listing</a>
               </li>
-              <li class="breadcrumb-item fs-12 letter-spacing-087 active">Villa on Hollywood Boulevard</li>
+              <li class="breadcrumb-item fs-12 letter-spacing-087 active"><?php echo $row['name']; ?></li>
             </ol>
           </nav>
           <div class="d-md-flex justify-content-md-between mb-1">
             <ul class="list-inline d-sm-flex align-items-sm-center mb-0">
-              <li class="list-inline-item badge badge-orange mr-2">Featured</li>
-              <li class="list-inline-item badge badge-primary mr-3">For Sale</li>
-              <li class="list-inline-item mr-2 mt-2 mt-sm-0"><i class="fal fa-clock mr-1"></i>2 months ago</li>
-              <li class="list-inline-item mt-2 mt-sm-0"><i class="fal fa-eye mr-1"></i>1039 views</li>
-            </ul>
-            <ul class="list-inline mb-0 mr-n2 my-4 my-md-0">
-              <li class="list-inline-item mr-2">
-                <a href="#" class="btn btn-outline-light px-3 text-body d-flex align-items-center h-32 border">
-                  <i class="far fa-heart mr-2 fs-15 text-primary"></i>Save
-                </a>
+              <?php
+                $featured = $row['featured'];
+                if ($featured == 1) {
+                  echo "<li class='list-inline-item badge badge-orange mr-2'>Featured</li>";
+                  }
+                ?>
+              <li class="list-inline-item badge badge-primary mr-3">
+                <?php
+                  $type = $row['type'];
+                  if ($type == 1) {
+                    echo "Residential";
+                  } else {
+                    echo "Commercial";
+                  }
+                ?>
               </li>
-              <li class="list-inline-item mr-2">
-                <a href="#" class="btn btn-outline-light px-3 text-body d-flex align-items-center h-32 border">
-                  <i class="far fa-share-alt mr-2 fs-15 text-primary"></i>Share
-                </a>
-              </li>
-              <li class="list-inline-item mr-2">
-                <a href="#" class="btn btn-outline-light px-3 text-body d-flex align-items-center h-32 border">
-                  <i class="far fa-print mr-2 fs-15 text-primary"></i>Print
-                </a>
+              <li class="list-inline-item mr-2 mt-2 mt-sm-0">
+                <i class="fal fa-clock mr-1"></i>
+                <?php
+                  $time = $row['date'];
+                  $secs = strtotime($time) - strtotime('TODAY');
+
+                  if ($secs < 60) {
+                    echo "Now";
+                  } elseif ($secs < 3600) {
+                    $pass = $secs/60;
+                    echo "$pass minutes ago";
+                  } elseif ($secs > 3600){
+                    echo "Today";
+                  } elseif ($secs < 3600 * 24 * 2 ) {
+                    echo "Yesterday";
+                  } elseif ($secs < 3600 * 24 * 8) {
+                    echo "Last week";
+                  } elseif ($secs < 3600 * 24 * 32) {
+                    echo "A month ago";
+                  } else {
+                    echo "Months ago";
+                  }
+                  
+                ?>
               </li>
             </ul>
           </div>
           <div class="d-md-flex justify-content-md-between mb-6">
             <div>
-              <h2 class="fs-35 font-weight-600 lh-15 text-heading">Villa on Hollywood Boulevard</h2>
-              <p class="mb-0"><i class="fal fa-map-marker-alt mr-2"></i>398 Pete Pascale Pl, New York</p>
+              <h2 class="fs-35 font-weight-600 lh-15 text-heading"><?php echo $row['name']; ?></h2>
+              <p class="mb-0"><i class="fal fa-map-marker-alt mr-2"></i><?php echo $row['location']; ?></p>
             </div>
             <div class="mt-2 text-md-right">
-              <p class="fs-22 text-heading font-weight-bold mb-0">$1.250.000</p>
-              <p class="mb-0">$9350/SqFt</p>
+              <p class="fs-22 text-heading font-weight-bold mb-0">Ksh <?php echo $row['price']; ?></p>
+              <p class="mb-0"><?php echo $row['size']; ?> Acres</p>
             </div>
           </div>
           <div class="galleries position-relative">
-            <ul class="nav nav-pills position-absolute pos-fixed-top-right z-index-3 pt-4 pr-5 flex-nowrap nav-gallery"
-                id="pills-tab"
-                role="tablist">
-              <li class="nav-item mr-2" role="presentation">
-                <a class="nav-link p-0 active d-flex align-items-center justify-content-center w-48px h-48 bg-white text-heading bg-hover-primary hover-white rounded-circle fs-18"
-                       data-toggle="pill" href="#image" role="tab"
-                       aria-selected="true">
-                  <i class="fal fa-camera"></i>
-                </a>
-              </li>
-              <li class="nav-item mr-2" role="presentation">
-                <a class="nav-link p-0 d-flex align-items-center justify-content-center w-48px h-48 bg-white text-heading bg-hover-primary hover-white rounded-circle fs-18"
-                       data-toggle="pill" href="#map-view" role="tab"
-                       aria-selected="false">
-                  <i class="fal fa-map-marked-alt"></i>
-                </a>
-              </li>
-            </ul>
             <div class="tab-content p-0 shadow-none">
               <div class="tab-pane fade show active" id="image" role="tabpanel">
                 <div class="slick-slider dots-white arrow-inner"
@@ -315,298 +225,7 @@
             <article class="col-lg-8">
               <section class="pb-8 px-6 pt-5 bg-white rounded-lg">
                 <h4 class="fs-22 text-heading mb-2">Description</h4>
-                <p class="mb-0 lh-214">Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus
-                  faucibus scelerisque eleifend donec. Porta nibh venenatis cras sed felis eget velit aliquet.
-                  Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas
-                  congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu
-                  sem. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Id interdum velit
-                  laoreet
-                  id donec ultrices tincidunt.</p>
-              </section>
-              <section class="mt-2 pb-3 px-6 pt-5 bg-white rounded-lg">
-                <h4 class="fs-22 text-heading mb-6">Facts and Features</h4>
-                <div class="row">
-                  <div class="col-lg-3 col-sm-4 mb-6">
-                    <div class="media">
-                      <div class="p-2 shadow-xxs-1 rounded-lg mr-2">
-                        <svg class="icon icon-family fs-32 text-primary">
-                          <use xlink:href="#icon-family"></use>
-                        </svg>
-                      </div>
-                      <div class="media-body">
-                        <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">Type</h5>
-                        <p class="mb-0 fs-13 font-weight-bold text-heading">Single Family</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-4 mb-6">
-                    <div class="media">
-                      <div class="p-2 shadow-xxs-1 rounded-lg mr-2">
-                        <svg class="icon icon-year fs-32 text-primary">
-                          <use xlink:href="#icon-year"></use>
-                        </svg>
-                      </div>
-                      <div class="media-body">
-                        <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">year built</h5>
-                        <p class="mb-0 fs-13 font-weight-bold text-heading">2020</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-4 mb-6">
-                    <div class="media">
-                      <div class="p-2 shadow-xxs-1 rounded-lg mr-2">
-                        <svg class="icon icon-heating fs-32 text-primary">
-                          <use xlink:href="#icon-heating"></use>
-                        </svg>
-                      </div>
-                      <div class="media-body">
-                        <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">heating</h5>
-                        <p class="mb-0 fs-13 font-weight-bold text-heading">Radiant</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-4 mb-6">
-                    <div class="media">
-                      <div class="p-2 shadow-xxs-1 rounded-lg mr-2">
-                        <svg class="icon icon-price fs-32 text-primary">
-                          <use xlink:href="#icon-price"></use>
-                        </svg>
-                      </div>
-                      <div class="media-body">
-                        <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">SQFT</h5>
-                        <p class="mb-0 fs-13 font-weight-bold text-heading">979.0</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-4 mb-6">
-                    <div class="media">
-                      <div class="p-2 shadow-xxs-1 rounded-lg mr-2">
-                        <svg class="icon icon-bedroom fs-32 text-primary">
-                          <use xlink:href="#icon-bedroom"></use>
-                        </svg>
-                      </div>
-                      <div class="media-body">
-                        <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">Bedrooms</h5>
-                        <p class="mb-0 fs-13 font-weight-bold text-heading">3</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-4 mb-6">
-                    <div class="media">
-                      <div class="p-2 shadow-xxs-1 rounded-lg mr-2">
-                        <svg class="icon icon-sofa fs-32 text-primary">
-                          <use xlink:href="#icon-sofa"></use>
-                        </svg>
-                      </div>
-                      <div class="media-body">
-                        <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">bathrooms</h5>
-                        <p class="mb-0 fs-13 font-weight-bold text-heading">2</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-4 mb-6">
-                    <div class="media">
-                      <div class="p-2 shadow-xxs-1 rounded-lg mr-2">
-                        <svg class="icon icon-Garage fs-32 text-primary">
-                          <use xlink:href="#icon-Garage"></use>
-                        </svg>
-                      </div>
-                      <div class="media-body">
-                        <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">GARAGE</h5>
-                        <p class="mb-0 fs-13 font-weight-bold text-heading">1</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-4 mb-6">
-                    <div class="media">
-                      <div class="p-2 shadow-xxs-1 rounded-lg mr-2">
-                        <svg class="icon icon-status fs-32 text-primary">
-                          <use xlink:href="#icon-status"></use>
-                        </svg>
-                      </div>
-                      <div class="media-body">
-                        <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">Status</h5>
-                        <p class="mb-0 fs-13 font-weight-bold text-heading">Active</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="mt-2 pb-6 px-6 pt-5 bg-white rounded-lg">
-                <h4 class="fs-22 text-heading mb-4">Additional Details</h4>
-                <div class="row">
-                  <dl class="col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Property ID</dt>
-                    <dd>AD-2910</dd>
-                  </dl>
-                  <dl class="col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Price</dt>
-                    <dd>$890.000</dd>
-                  </dl>
-                  <dl class="col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Property type</dt>
-                    <dd>Apartment, bar, cafe, villa</dd>
-                  </dl>
-                  <dl class="col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Property status</dt>
-                    <dd>For Sale</dd>
-                  </dl>
-                  <dl class="col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Rooms</dt>
-                    <dd>4</dd>
-                  </dl>
-                  <dl class="col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Bedrooms</dt>
-                    <dd>3</dd>
-                  </dl>
-                  <dl class="col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Size</dt>
-                    <dd>900SqFt</dd>
-                  </dl>
-                  <dl class="col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Bathrooms</dt>
-                    <dd>2</dd>
-                  </dl>
-                  <dl class="col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Garage</dt>
-                    <dd>1</dd>
-                  </dl>
-                  <dl class="col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Bathrooms</dt>
-                    <dd>2000 SqFt</dd>
-                  </dl>
-                  <dl class="col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Garage size</dt>
-                    <dd>50 SqFt</dd>
-                  </dl>
-                  <dl class="col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Year build</dt>
-                    <dd>2020</dd>
-                  </dl>
-                  <dl class="offset-sm-6 col-sm-6 mb-0 d-flex">
-                    <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Label</dt>
-                    <dd>Bestseller</dd>
-                  </dl>
-                </div>
-              </section>
-              <section class="mt-2 pb-7 px-6 pt-5 bg-white rounded-lg">
-                <h4 class="fs-22 text-heading mb-4">Offices Amenities</h4>
-                <ul class="list-unstyled mb-0 row no-gutters">
-                  <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Balcony
-                  </li>
-                  <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Fireplace
-                  </li>
-                  <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Balcony
-                  </li>
-                  <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Fireplace
-                  </li>
-                  <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Basement
-                  </li>
-                  <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Cooling
-                  </li>
-                  <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Basement
-                  </li>
-                  <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Cooling
-                  </li>
-                  <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Dining room
-                  </li>
-                  <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Dishwasher
-                  </li>
-                  <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Dining room
-                  </li>
-                  <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Dishwasher
-                  </li>
-                </ul>
-              </section>
-              <section class="mt-2 pb-7 px-6 pt-6 bg-white rounded-lg">
-                <h4 class="fs-22 text-heading mb-6">Floor Plans</h4>
-                <div class="accordion accordion-03 mb-3" id="accordion-01">
-                  <div class="card border-0 shadow-xxs-5 bg-gray-01">
-                    <div class="card-header bg-gray-01 border-gray border-0 p-0"
-                                 id="floor-plans-01">
-                      <div class="heading bg-gray-01 d-flex justify-content-between align-items-center px-6"
-                                     data-toggle="collapse" data-target="#collapse-01" aria-expanded="true"
-                                     aria-controls="collapse-01" role="button">
-                        <h2 class="mb-0 fs-16 text-heading font-weight-500 py-4 lh-13">First Floor</h2>
-                        <ul class="list-inline mb-0 d-none d-sm-block pr-2">
-                          <li class=" list-inline-item text-muted mr-4">Beds : <span
-                                                class="font-weight-500 text-heading">2</span></li>
-                          <li class=" list-inline-item text-muted mr-4">Bath : <span
-                                                class="font-weight-500 text-heading">2</span></li>
-                          <li class=" list-inline-item text-muted mr-4">Sqft : <span
-                                                class="font-weight-500 text-heading">900</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div id="collapse-01"
-                                 class="collapse show mx-6 mb-6 bg-white"
-                                 aria-labelledby="floor-plans-01"
-                                 data-parent="#accordion-01">
-                      <div class="card-body card-body col-sm-6 offset-sm-3 mb-3">
-                        <img src="images/single-detail-property-01.jpg" class="card-img"
-                                         alt="Floor Plans">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion accordion-03 mb-3" id="accordion-02">
-                  <div class="card border-0 shadow-xxs-5 bg-gray-01">
-                    <div class="card-header bg-gray-01 border-gray border-0 p-0"
-                                 id="floor-plans-02">
-                      <div class="heading bg-gray-01 d-flex justify-content-between align-items-center px-6"
-                                     data-toggle="collapse" data-target="#collapse-02" aria-expanded="true"
-                                     aria-controls="collapse-02" role="button">
-                        <h2 class="mb-0 fs-16 text-heading font-weight-500 py-4 lh-13">Second Floor</h2>
-                        <ul class="list-inline mb-0 d-none d-sm-block pr-2">
-                          <li class=" list-inline-item text-muted mr-4">Beds : <span
-                                                class="font-weight-500 text-heading">2</span></li>
-                          <li class=" list-inline-item text-muted mr-4">Bath : <span
-                                                class="font-weight-500 text-heading">2</span></li>
-                          <li class=" list-inline-item text-muted mr-4">Sqft : <span
-                                                class="font-weight-500 text-heading">900</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div id="collapse-02"
-                                 class="collapse  mx-6 mb-6 bg-white"
-                                 aria-labelledby="floor-plans-02"
-                                 data-parent="#accordion-02">
-                      <div class="card-body card-body col-sm-6 offset-sm-3 mb-3">
-                        <img src="images/single-detail-property-01.jpg" class="card-img"
-                                         alt="Floor Plans">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion accordion-03 mb-3" id="accordion-03">
-                  <div class="card border-0 shadow-xxs-5 bg-gray-01">
-                    <div class="card-header bg-gray-01 border-gray border-0 p-0"
-                                 id="floor-plans-03">
-                      <div class="heading bg-gray-01 d-flex justify-content-between align-items-center px-6"
-                                     data-toggle="collapse" data-target="#collapse-03" aria-expanded="true"
-                                     aria-controls="collapse-03" role="button">
-                        <h2 class="mb-0 fs-16 text-heading font-weight-500 py-4 lh-13">Third Floor</h2>
-                        <ul class="list-inline mb-0 d-none d-sm-block pr-2">
-                          <li class=" list-inline-item text-muted mr-4">Beds : <span
-                                                class="font-weight-500 text-heading">2</span></li>
-                          <li class=" list-inline-item text-muted mr-4">Bath : <span
-                                                class="font-weight-500 text-heading">2</span></li>
-                          <li class=" list-inline-item text-muted mr-4">Sqft : <span
-                                                class="font-weight-500 text-heading">900</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div id="collapse-03"
-                                 class="collapse  mx-6 mb-6 bg-white"
-                                 aria-labelledby="floor-plans-03"
-                                 data-parent="#accordion-03">
-                      <div class="card-body card-body col-sm-6 offset-sm-3 mb-3">
-                        <img src="images/single-detail-property-01.jpg" class="card-img"
-                                         alt="Floor Plans">
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <p class="mb-0 lh-214"><?php echo $row['description']; ?></p>
               </section>
               <section class="mt-2 pb-7 px-6 pt-6 bg-white rounded-lg">
                 <h4 class="fs-22 text-heading lh-15 mb-5">Rating & Reviews</h4>
@@ -780,719 +399,15 @@
                   </div>
                 </div>
               </section>
-              <section class="mt-2 pb-2 px-6 pt-6 bg-white rounded-lg">
-                <div class="card border-0">
-                  <div class="card-body p-0">
-                    <h3 class="fs-16 lh-2 text-heading mb-0 d-inline-block pr-4 border-bottom border-primary">5
-                      Reviews</h3>
-                    <div class="media border-top pt-7 pb-6 d-sm-flex d-block text-sm-left text-center">
-                      <img src="images/review-07.jpg" alt="Danny Fox"
-                                     class="mr-sm-8 mb-4 mb-sm-0">
-                      <div class="media-body">
-                        <div class="row mb-1 align-items-center">
-                          <div class="col-sm-6 mb-2 mb-sm-0">
-                            <h4 class="mb-0 text-heading fs-14">Danny Fox</h4>
-                          </div>
-                          <div class="col-sm-6">
-                            <ul class="list-inline d-flex justify-content-sm-end justify-content-center mb-0">
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <p class="mb-3 pr-xl-17">Very good and fast support during the week. Thanks for
-                          always
-                          keeping your WordPress themes up to date. Your level of support and dedication
-                          is second to none.</p>
-                        <div class="d-flex justify-content-sm-start justify-content-center">
-                          <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                          <a href="#"
-                                           class="mb-0 text-heading border-left border-dark hover-primary lh-1 ml-2 pl-2">Reply</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="media border-top py-6 d-sm-flex d-block text-sm-left text-center">
-                      <img src="images/review-08.jpg" alt="Viola Austin"
-                                     class="mr-sm-8 mb-4 mb-sm-0">
-                      <div class="media-body">
-                        <div class="row mb-1 align-items-center">
-                          <div class="col-sm-6 mb-2 mb-sm-0">
-                            <h4 class="mb-0 text-heading fs-14">Viola Austin</h4>
-                          </div>
-                          <div class="col-sm-6 ">
-                            <ul class="list-inline d-flex justify-content-sm-end justify-content-center mb-0">
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <p class="mb-3 pr-xl-17">Very good and fast support during the week. Thanks for
-                          always
-                          keeping your WordPress themes up to date. Your level of support and dedication
-                          is second to none.</p>
-                        <div class="d-flex justify-content-sm-start justify-content-center">
-                          <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                          <a href="#"
-                                           class="mb-0 text-heading border-left border-dark hover-primary lh-1 ml-2 pl-2">Reply</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="media border-top py-6 d-sm-flex d-block text-sm-left text-center">
-                      <img src="images/review-09.jpg" alt="Nettie Singleton"
-                                     class="mr-sm-8 mb-4 mb-sm-0">
-                      <div class="media-body">
-                        <div class="row mb-1 align-items-center">
-                          <div class="col-sm-6 mb-2 mb-sm-0">
-                            <h4 class="mb-0 text-heading fs-14">Nettie Singleton</h4>
-                          </div>
-                          <div class="col-sm-6 ">
-                            <ul class="list-inline d-flex justify-content-sm-end justify-content-center mb-0">
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <p class="mb-3 pr-xl-17">Very good and fast support during the week. Thanks for
-                          always
-                          keeping your WordPress themes up to date. Your level of support and dedication
-                          is second to none.</p>
-                        <div class="d-flex justify-content-sm-start justify-content-center">
-                          <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                          <a href="#"
-                                           class="mb-0 text-heading border-left border-dark hover-primary lh-1 ml-2 pl-2">Reply</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="media border-top py-6 d-sm-flex d-block text-sm-left text-center">
-                      <img src="images/review-07.jpg" alt="Vernon Fisher"
-                                     class="mr-sm-8 mb-4 mb-sm-0">
-                      <div class="media-body">
-                        <div class="row mb-1 align-items-center">
-                          <div class="col-sm-6 mb-2 mb-sm-0">
-                            <h4 class="mb-0 text-heading fs-14">Vernon Fisher</h4>
-                          </div>
-                          <div class="col-sm-6">
-                            <ul class="list-inline d-flex justify-content-sm-end justify-content-center mb-0">
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-border fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <p class="mb-3 pr-xl-17">Very good and fast support during the week. Thanks for
-                          always
-                          keeping your WordPress themes up to date. Your level of support and dedication
-                          is second to none.</p>
-                        <div class="d-flex justify-content-sm-start justify-content-center">
-                          <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                          <a href="#"
-                                           class="mb-0 text-heading border-left border-dark hover-primary lh-1 ml-2 pl-2">Reply</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="media border-top py-6 d-sm-flex d-block text-sm-left text-center">
-                      <div class="w-82px h-82 mr-2 bg-gray-01 rounded-circle fs-25 font-weight-500 text-muted d-flex align-items-center justify-content-center text-uppercase mr-sm-8 mb-4 mb-sm-0 mx-auto">
-                        HI
-                      </div>
-                      <div class="media-body">
-                        <div class="row mb-1 align-items-center">
-                          <div class="col-sm-6 mb-2 mb-sm-0">
-                            <h4 class="mb-0 text-heading fs-14">Harry Iglesias</h4>
-                          </div>
-                          <div class="col-sm-6">
-                            <ul class="list-inline d-flex justify-content-sm-end justify-content-center mb-0">
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-warning fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                              <li class="list-inline-item mr-1">
-                                <span class="text-border fs-12 lh-2"><i
-                                                            class="fas fa-star"></i></span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <p class="mb-3 pr-xl-17">Very good and fast support during the week. Thanks for
-                          always
-                          keeping your WordPress themes up to date. Your level of support and dedication
-                          is second to none.</p>
-                        <div class="d-flex justify-content-sm-start justify-content-center">
-                          <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                          <a href="#"
-                                           class="mb-0 text-heading border-left border-dark hover-primary lh-1 ml-2 pl-2">Reply</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="mt-2 pb-7 px-6 pt-6 bg-white rounded-lg">
-                <div class="card border-0">
-                  <div class="card-body p-0">
-                    <h3 class="fs-16 lh-2 text-heading mb-4">Write A Review</h3>
-                    <form>
-                      <div class="form-group mb-4 d-flex justify-content-start">
-                        <div class="rate-input">
-                          <input type="radio" id="star5" name="rate" value="5">
-                          <label for="star5" title="text" class="mb-0 mr-1 lh-1">
-                            <i class="fas fa-star"></i>
-                          </label>
-                          <input type="radio" id="star4" name="rate" value="4">
-                          <label for="star4" title="text" class="mb-0 mr-1 lh-1">
-                            <i class="fas fa-star"></i>
-                          </label>
-                          <input type="radio" id="star3" name="rate" value="3">
-                          <label for="star3" title="text" class="mb-0 mr-1 lh-1">
-                            <i class="fas fa-star"></i>
-                          </label>
-                          <input type="radio" id="star2" name="rate" value="2">
-                          <label for="star2" title="text" class="mb-0 mr-1 lh-1">
-                            <i class="fas fa-star"></i>
-                          </label>
-                          <input type="radio" id="star1" name="rate" value="1">
-                          <label for="star1" title="text" class="mb-0 mr-1 lh-1">
-                            <i class="fas fa-star"></i>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <div class="form-group mb-4">
-                            <input placeholder="Your Name" class="form-control form-control-lg border-0"
-                                                   type="text" name="name">
-                          </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="form-group mb-4">
-                            <input type="email" placeholder="Email" name="email"
-                                                   class="form-control form-control-lg border-0">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group mb-6">
-                        <textarea class="form-control form-control-lg border-0" placeholder="Your Review"
-                                              name="message" rows="5"></textarea>
-                      </div>
-                      <button type="submit" class="btn btn-lg btn-primary px-10">Submit</button>
-                    </form>
-                  </div>
-                </div>
-              </section>
-              <section class="mt-2 pb-5 px-6 pt-6 bg-white rounded-lg">
-                <h4 class="fs-22 text-heading mb-5">What is Nearby?</h4>
-                <div class="mt-4">
-                  <h6 class="mb-0 mt-5"><a href="#"
-                                                 class="fs-16 lh-2 text-heading border-bottom border-primary pb-1">Restaurants</a></h6>
-                  <div class="border-top pt-2">
-                    <div class="py-3 border-bottom d-sm-flex justify-content-sm-between">
-                      <div class="media align-items-sm-center d-sm-flex d-block">
-                        <a href="#" class="hover-shine">
-                          <img src="images/single-detail-property-02.jpg"
-                                             class="mr-sm-4 rounded-lg w-sm-90"
-                                             alt="Bacchanal Buffet-Temporarily Closed">
-                        </a>
-                        <div class="mt-sm-0 mt-2">
-                          <h4 class="my-0"><a href="#" class="lh-186 fs-15 text-heading hover-primary">Bacchanal Buffet-Temporarily Closed</a></h4>
-                          <p class="lh-186 fs-15 font-weight-500 mb-0">3570 S Las Vegas BlvdLas Vegas, NV 89109</p>
-                        </div>
-                      </div>
-                      <div class="text-lg-right mt-lg-0 mt-2">
-                        <p class="mb-2 mb-0 lh-13">120 Reviews</p>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                      </div>
-                    </div>
-                    <div class="py-3 border-bottom d-sm-flex justify-content-sm-between">
-                      <div class="media align-items-sm-center d-sm-flex d-block">
-                        <a href="#" class="hover-shine">
-                          <img src="images/single-detail-property-03.jpg"
-                                             class="mr-sm-4 rounded-lg w-sm-90"
-                                             alt="Bacchanal Buffet-Temporarily Closed">
-                        </a>
-                        <div class="mt-sm-0 mt-2">
-                          <h4 class="my-0"><a href="#" class="lh-186 fs-15 text-heading hover-primary">Bacchanal Buffet-Temporarily Closed</a></h4>
-                          <p class="lh-186 fs-15 font-weight-500 mb-0">3084 S Highland DrSte C</p>
-                        </div>
-                      </div>
-                      <div class="text-lg-right mt-lg-0 mt-2">
-                        <p class="mb-2 mb-0 lh-13">120 Reviews</p>
-                        <div class="text-lg-right mt-lg-0 mt-2">
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-7"></i>
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-7"></i>
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-7"></i>
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-7"></i>
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-1"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="py-3 border-bottom d-sm-flex justify-content-sm-between">
-                      <div class="media align-items-sm-center d-sm-flex d-block">
-                        <a href="#" class="hover-shine">
-                          <img src="images/single-detail-property-04.jpg"
-                                             class="mr-sm-4 rounded-lg w-sm-90"
-                                             alt="Bacchanal Buffet-Temporarily Closed">
-                        </a>
-                        <div class="mt-sm-0 mt-2">
-                          <h4 class="my-0"><a href="#" class="lh-186 fs-15 text-heading hover-primary">Bacchanal Buffet-Temporarily Closed</a></h4>
-                          <p class="lh-186 fs-15 font-weight-500 mb-0">3570 S Las Vegas BlvdLas Vegas, NV 89109</p>
-                        </div>
-                      </div>
-                      <div class="text-lg-right mt-lg-0 mt-2">
-                        <p class="mb-2 mb-0 lh-13">120 Reviews</p>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <h6 class="mb-0 mt-5"><a href="#"
-                                                 class="fs-16 lh-2 text-heading border-bottom border-primary pb-1">Education</a></h6>
-                  <div class="border-top pt-2">
-                    <div class="py-3 border-bottom d-sm-flex justify-content-sm-between">
-                      <div class="media align-items-sm-center d-sm-flex d-block">
-                        <a href="#" class="hover-shine">
-                          <img src="images/single-detail-property-07.jpg"
-                                             class="mr-sm-4 rounded-lg w-sm-90"
-                                             alt="Bacchanal Buffet-Temporarily Closed">
-                        </a>
-                        <div class="mt-sm-0 mt-2">
-                          <h4 class="my-0"><a href="#" class="lh-186 fs-15 text-heading hover-primary">Safe Direction Firearms Training</a></h4>
-                          <p class="lh-186 fs-15 font-weight-500 mb-0">3570 S Las Vegas BlvdLas Vegas, NV 89109</p>
-                        </div>
-                      </div>
-                      <div class="text-lg-right mt-lg-0 mt-2">
-                        <p class="mb-2 mb-0 lh-13">120 Reviews</p>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                      </div>
-                    </div>
-                    <div class="py-3 border-bottom d-sm-flex justify-content-sm-between">
-                      <div class="media align-items-sm-center d-sm-flex d-block">
-                        <a href="#" class="hover-shine">
-                          <img src="images/single-detail-property-08.jpg"
-                                             class="mr-sm-4 rounded-lg w-sm-90"
-                                             alt="Bacchanal Buffet-Temporarily Closed">
-                        </a>
-                        <div class="mt-sm-0 mt-2">
-                          <h4 class="my-0"><a href="#" class="lh-186 fs-15 text-heading hover-primary">Rabbi Shai Specht-Sandler</a></h4>
-                          <p class="lh-186 fs-15 font-weight-500 mb-0">3084 S Highland DrSte C</p>
-                        </div>
-                      </div>
-                      <div class="text-lg-right mt-lg-0 mt-2">
-                        <p class="mb-2 mb-0 lh-13">120 Reviews</p>
-                        <div class="text-lg-right mt-lg-0 mt-2">
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-7"></i>
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-7"></i>
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-7"></i>
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-7"></i>
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-1"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="py-3 border-bottom d-sm-flex justify-content-sm-between">
-                      <div class="media align-items-sm-center d-sm-flex d-block">
-                        <a href="#" class="hover-shine">
-                          <img src="images/single-detail-property-09.jpg"
-                                             class="mr-sm-4 rounded-lg w-sm-90"
-                                             alt="Bacchanal Buffet-Temporarily Closed">
-                        </a>
-                        <div class="mt-sm-0 mt-2">
-                          <h4 class="my-0"><a href="#" class="lh-186 fs-15 text-heading hover-primary">Safe Direction Firearms Training</a></h4>
-                          <p class="lh-186 fs-15 font-weight-500 mb-0">3570 S Las Vegas BlvdLas Vegas, NV 89109</p>
-                        </div>
-                      </div>
-                      <div class="text-lg-right mt-lg-0 mt-2">
-                        <p class="mb-2 mb-0 lh-13">120 Reviews</p>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <h6 class="mb-0 mt-5"><a href="#"
-                                                 class="fs-16 lh-2 text-heading border-bottom border-primary pb-1">Health & Medical</a></h6>
-                  <div class="border-top pt-2">
-                    <div class="py-3 border-bottom d-sm-flex justify-content-sm-between">
-                      <div class="media align-items-sm-center d-sm-flex d-block">
-                        <a href="#" class="hover-shine">
-                          <img src="images/single-detail-property-10.jpg"
-                                             class="mr-sm-4 rounded-lg w-sm-90"
-                                             alt="Bacchanal Buffet-Temporarily Closed">
-                        </a>
-                        <div class="mt-sm-0 mt-2">
-                          <h4 class="my-0"><a href="#" class="lh-186 fs-15 text-heading hover-primary">Coppola David F DC & Assoc</a></h4>
-                          <p class="lh-186 fs-15 font-weight-500 mb-0">3570 S Las Vegas BlvdLas Vegas, NV 89109</p>
-                        </div>
-                      </div>
-                      <div class="text-lg-right mt-lg-0 mt-2">
-                        <p class="mb-2 mb-0 lh-13">120 Reviews</p>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                        <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm"></i>
-                      </div>
-                    </div>
-                    <div class="py-3 border-bottom d-sm-flex justify-content-sm-between">
-                      <div class="media align-items-sm-center d-sm-flex d-block">
-                        <a href="#" class="hover-shine">
-                          <img src="images/single-detail-property-11.jpg"
-                                             class="mr-sm-4 rounded-lg w-sm-90"
-                                             alt="Bacchanal Buffet-Temporarily Closed">
-                        </a>
-                        <div class="mt-sm-0 mt-2">
-                          <h4 class="my-0"><a href="#" class="lh-186 fs-15 text-heading hover-primary">Elite Medical Center</a></h4>
-                          <p class="lh-186 fs-15 font-weight-500 mb-0">3084 S Highland DrSte C</p>
-                        </div>
-                      </div>
-                      <div class="text-lg-right mt-lg-0 mt-2">
-                        <p class="mb-2 mb-0 lh-13">120 Reviews</p>
-                        <div class="text-lg-right mt-lg-0 mt-2">
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-7"></i>
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-7"></i>
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-7"></i>
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-7"></i>
-                          <i class="fas fa-star w-18px h-18 d-inline-flex justify-content-center align-items-center rate-bg-blue text-white fs-12 rounded-sm opacity-1"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="mt-2 pb-7 px-6 pt-6 bg-white rounded-lg">
-                <h4 class="fs-22 text-heading mb-6">Property Attachments</h4>
-                <div class="d-sm-flex">
-                  <div class="w-sm-170 mb-sm-0 mb-6 mr-sm-6">
-                    <div class="card text-center pt-4">
-                      <img src="images/single-detail-property-05.png"
-                                     class="card-img card-img w-78px mx-auto" alt="Villa Called Archangel Word Document">
-                      <div class="card-body p-0 mt-4">
-                        <p class="fs-13 lh-2  mb-0 py-0 px-2">Villa Called Archangel Word Document</p>
-                        <a href="#"
-                                       class="btn btn-block bg-gray-01 border-0 fs-14 text-heading">Download<i
-                                            class="far fa-arrow-alt-circle-down ml-1 text-primary"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-sm-170 mb-sm-0 mb-6 mr-sm-6">
-                    <div class="card text-center pt-4">
-                      <img src="images/single-detail-property-06.png"
-                                     class="card-img card-img w-78px mx-auto" alt="Villa Called Archangel PDF Document">
-                      <div class="card-body p-0 mt-4">
-                        <p class="fs-13 lh-2  mb-0 py-0 px-2">Villa Called Archangel PDF Document</p>
-                        <a href="#"
-                                       class="btn btn-block bg-gray-01 border-0 fs-14 text-heading">Download<i
-                                            class="far fa-arrow-alt-circle-down ml-1 text-primary"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="mt-2 pb-6 px-6 pt-6 bg-white rounded-lg">
-                <h4 class="fs-22 text-heading mb-6">Virtual Tour</h4>
-                <iframe height="430"
-                            src="https://my.matterport.com/show/?m=wWcGxjuUuSb&amp;utm_source=hit-content-embed"
-                            allowfullscreen="" class="w-100"></iframe>
-              </section>
-              <section class="mt-2 pb-6 px-6 pt-6 bg-white rounded-lg">
-                <h4 class="fs-22 text-heading mb-6">Location</h4>
-                <div class="position-relative">
-                  <div id="map" class="mapbox-gl map-point-animate"
-                             data-mapbox-access-token="pk.eyJ1IjoiZHVvbmdsaCIsImEiOiJjanJnNHQ4czExMzhyNDVwdWo5bW13ZmtnIn0.f1bmXQsS6o4bzFFJc8RCcQ"
-                             data-mapbox-options='{"center":[-73.9927227, 40.6741035],"setLngLat":[-73.9927227, 40.6741035]}'
-                             data-mapbox-marker='[{"position":[-73.9927227, 40.6741035],"className":"marker","backgroundImage":"images/googlle-market-01.png","backgroundRepeat":"no-repeat","width":"30px","height":"40px"}]'>
-                  </div>
-                  <p class="mb-0 p-3 bg-white shadow rounded-lg position-absolute pos-fixed-bottom mb-4 ml-4 lh-17 z-index-2">62 Gresham St, Victoria Park <br/>
-                     WA 6100, Australia</p>
-                </div>
-              </section>
-              <section class="mt-2 pb-7 px-6 pt-6 bg-white rounded-lg">
-                <h4 class="fs-22 text-heading mb-5">Mortgage calculator</h4>
-                <form>
-                  <div class="row">
-                    <div class="col-md-6 mb-4">
-                      <label>Total Amount</label>
-                      <div class="position-relative">
-                        <input type="number" class="form-control border-0 pr-3 h-52 pl-7" value="345"
-                                           name="total-amount">
-                        <span class="position-absolute pl-3 pos-fixed-left-center fs-13 font-weight-600">$</span>
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                      <label>Down Payment</label>
-                      <div class="position-relative">
-                        <input type="number" class="form-control border-0 pr-3 h-52 pl-7" value="0"
-                                           name="down-payment">
-                        <span class="position-absolute pl-3 pos-fixed-left-center fs-13 font-weight-600">$</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6 mb-4">
-                      <label>Interest Rate</label>
-                      <div class="position-relative">
-                        <input type="number" class="form-control border-0 pr-3 h-52 pl-7" value="2.500"
-                                           step="0.25" name="interest-rate">
-                        <span class="position-absolute pl-3 pos-fixed-left-center fs-13 font-weight-600">%</span>
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                      <label>Number of years</label>
-                      <input type="number" class="form-control border-0 px-3 h-52" value="25" name="years">
-                    </div>
-                  </div>
-                  <div class="form-group mb-6">
-                    <label>Payment Period</label>
-                    <select class="form-control selectpicker" data-style="btn-lg h-52 px-3"
-                                    name="payment-period">
-                      <option selected>Monthly</option>
-                      <option>Yearly</option>
-                    </select>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <button class="btn btn-primary fs-14 h-52 px-8" type="submit">Caculate</button>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="shadow-xxs-2 pt-1 pb-2 px-6 border-bottom border-primary border-5x rounded-lg">
-                        <dl class="d-flex mb-0 justify-content-between py-2">
-                          <dt class="font-weight-normal">Monthly Payment</dt>
-                          <dd class="font-weight-500 text-heading mb-0">$33</dd>
-                        </dl>
-                        <dl class="d-flex mb-0 justify-content-between border-top py-2">
-                          <dt class="font-weight-normal">Total Cost of Loan</dt>
-                          <dd class="font-weight-500 text-heading mb-0">$464</dd>
-                        </dl>
-                        <dl class="d-flex mb-0 justify-content-between border-top py-2">
-                          <dt class="font-weight-normal">Total interest Paid</dt>
-                          <dd class="font-weight-500 text-heading mb-0">$119</dd>
-                        </dl>
-                        <dl class="d-flex mb-0 justify-content-between border-top py-2">
-                          <dt class="font-weight-normal">Mortgage Payment</dt>
-                          <dd class="font-weight-500 text-heading mb-0">$1.55</dd>
-                        </dl>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </section>
-              <section class="mt-2 pb-4 px-6 pt-6 bg-white rounded-lg chart">
-                <div class="card border-0">
-                  <div class="card-body p-0 collapse-tabs">
-                    <div class="d-flex align-items-center mb-5">
-                      <h2 class="mb-0 text-heading fs-22 lh-15 mr-auto">Page statistics</h2>
-                      <ul class="nav nav-pills nav-pills-01 justify-content-end d-none d-sm-flex"
-                                    role="tablist">
-                        <li class="nav-item px-5 py-1">
-                          <a class="nav-link active bg-transparent shadow-none p-0 letter-spacing-1"
-                                           id="hours-tab" data-toggle="tab"
-                                           href="#hours"
-                                           role="tab"
-                                           aria-controls="hours" aria-selected="true">Hours</a>
-                        </li>
-                        <li class="nav-item px-5 py-1">
-                          <a class="nav-link bg-transparent shadow-none p-0 letter-spacing-1"
-                                           id="weekly-tab"
-                                           data-toggle="tab"
-                                           href="#weekly"
-                                           role="tab"
-                                           aria-controls="weekly" aria-selected="false">Weekly</a>
-                        </li>
-                        <li class="nav-item px-5 py-1">
-                          <a class="nav-link bg-transparent shadow-none p-0 letter-spacing-1"
-                                           id="monthly-tab"
-                                           data-toggle="tab"
-                                           href="#monthly"
-                                           role="tab"
-                                           aria-controls="monthly" aria-selected="false">Monthly</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="tab-content shadow-none p-0">
-                      <div id="collapse-tabs-accordion">
-                        <div class="tab-pane tab-pane-parent fade show active px-0" id="hours"
-                                         role="tabpanel"
-                                         aria-labelledby="hours-tab">
-                          <div class="card bg-transparent mb-sm-0 border-0">
-                            <div class="card-header d-block d-sm-none bg-transparent px-0 py-1 border-bottom-0"
-                                                 id="headingHours">
-                              <h5 class="mb-0">
-                                <button class="btn collapse-parent font-size-h5 btn-block border shadow-none"
-                                                            data-toggle="collapse"
-                                                            data-target="#hours-collapse"
-                                                            aria-expanded="true"
-                                                            aria-controls="hours-collapse">
-                                  Hours
-                                </button>
-                              </h5>
-                            </div>
-                            <div id="hours-collapse" class="collapse show collapsible"
-                                                 aria-labelledby="headingHours"
-                                                 data-parent="#collapse-tabs-accordion">
-                              <div class="card-body p-0 py-4">
-                                <canvas class="chartjs" data-chart-options="[]"
-                                                            data-chart-labels='["05h","08h","11h","14h","17h","20h","23h"]'
-                                                            data-chart-datasets='[{"label":"Clicked","data":[0,7,10,3,15,30,10],"backgroundColor":"rgba(105, 105, 235, 0.1)","borderColor":"#6969eb","borderWidth":3,"fill":true},{"label":"View","data":[10,9,18,20,28,40,27],"backgroundColor":"rgba(254, 91, 52, 0.1)","borderColor":"#ff6935","borderWidth":3,"fill":true}]'>
-                                </canvas>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-pane tab-pane-parent fade px-0" id="weekly"
-                                         role="tabpanel"
-                                         aria-labelledby="weekly-tab">
-                          <div class="card bg-transparent mb-sm-0 border-0">
-                            <div class="card-header d-block d-sm-none bg-transparent px-0 py-1 border-bottom-0"
-                                                 id="headingWeekly">
-                              <h5 class="mb-0">
-                                <button class="btn collapse-parent font-size-h5 btn-block collapsed border shadow-none"
-                                                            data-toggle="collapse"
-                                                            data-target="#weekly-collapse"
-                                                            aria-expanded="true"
-                                                            aria-controls="weekly-collapse">
-                                  Weekly
-                                </button>
-                              </h5>
-                            </div>
-                            <div id="weekly-collapse" class="collapse collapsible"
-                                                 aria-labelledby="headingWeekly"
-                                                 data-parent="#collapse-tabs-accordion">
-                              <div class="card-body p-0 py-4">
-                                <canvas class="chartjs" data-chart-options="[]"
-                                                            data-chart-labels='["Mar 12","Mar 13","Mar 14","Mar 15","Mar 16","Mar 17","Mar 18","Mar 19"]'
-                                                            data-chart-datasets='[{"label":"Clicked","data":[0,13,9,3,15,15,10,0],"backgroundColor":"rgba(105, 105, 235, 0.1)","borderColor":"#6969eb","borderWidth":3,"fill":true},{"label":"View","data":[10,20,18,15,28,33,27,10],"backgroundColor":"rgba(254, 91, 52, 0.1)","borderColor":"#ff6935","borderWidth":3,"fill":true}]'>
-                                </canvas>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-pane tab-pane-parent fade px-0" id="monthly" role="tabpanel"
-                                         aria-labelledby="monthly-tab">
-                          <div class="card bg-transparent mb-sm-0 border-0">
-                            <div class="card-header d-block d-sm-none bg-transparent px-0 py-1 border-bottom-0"
-                                                 id="headingMonthly">
-                              <h5 class="mb-0">
-                                <button class="btn btn-block collapse-parent collapsed border shadow-none"
-                                                            data-toggle="collapse"
-                                                            data-target="#monthly-collapse"
-                                                            aria-expanded="true"
-                                                            aria-controls="monthly-collapse">
-                                  Monthly
-                                </button>
-                              </h5>
-                            </div>
-                            <div id="monthly-collapse" class="collapse collapsible"
-                                                 aria-labelledby="headingMonthly"
-                                                 data-parent="#collapse-tabs-accordion">
-                              <div class="card-body p-0 py-4">
-                                <canvas class="chartjs" data-chart-options="[]"
-                                                            data-chart-labels='["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]'
-                                                            data-chart-datasets='[{"label":"Clicked","data":[2,15,20,10,15,20,10,0,20,30,10,0],"backgroundColor":"rgba(105, 105, 235, 0.1)","borderColor":"#6969eb","borderWidth":3,"fill":true},{"label":"View","data":[10,20,18,15,28,33,27,10,20,30,10,0],"backgroundColor":"rgba(254, 91, 52, 0.1)","borderColor":"#ff6935","borderWidth":3,"fill":true}]'>
-                                </canvas>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+              <?php
+            }
+              ?>
               <section class="mt-2 pb-7 px-6 pt-6 bg-white rounded-lg">
                 <h4 class="fs-22 text-heading mb-6">Similar Homes You May Like</h4>
+                  <?php
+                    $select = mysqli_query($server, "SELECT * FROM `properties` WHERE `id` != '$view_id' ORDER BY `id` ASC LIMIT 3") or die(mysqli_error($server));
+                    while ($row = mysqli_fetch_assoc($select)) {
+                  ?>
                 <div class="slick-slider"
                          data-slick-options='{"slidesToShow": 2, "dots":false,"responsive":[{"breakpoint": 1200,"settings": {"slidesToShow":2,"arrows":false}},{"breakpoint": 992,"settings": {"slidesToShow":2}},{"breakpoint": 768,"settings": {"slidesToShow": 1}},{"breakpoint": 576,"settings": {"slidesToShow": 1}}]}'>
                   <div class="box">
@@ -1502,245 +417,55 @@
                                          alt="Home in Metric Way">
                         <div class="card-img-overlay p-2 d-flex flex-column">
                           <div>
-                            <span class="badge mr-2 badge-primary">for Sale</span>
+                            <span class="badge mr-2 badge-primary">
+                              <?php
+                                $type = $row['type'];
+                                if ($type == 1) {
+                                  echo "Residential";
+                                } else {
+                                  echo "Commercial";
+                                }
+                              ?>
+                            </span>
                           </div>
-                          <ul class="list-inline mb-0 mt-auto hover-image">
-                            <li class="list-inline-item mr-2" data-toggle="tooltip" title="9 Images">
-                              <a href="#" class="text-white hover-primary">
-                                <i class="far fa-images"></i><span class="pl-1">9</span>
-                              </a>
-                            </li>
-                            <li class="list-inline-item" data-toggle="tooltip" title="2 Video">
-                              <a href="#" class="text-white hover-primary">
-                                <i class="far fa-play-circle"></i><span class="pl-1">2</span>
-                              </a>
-                            </li>
-                          </ul>
                         </div>
                       </div>
                       <div class="card-body pt-3">
-                        <h2 class="card-title fs-16 lh-2 mb-0"><a href="single-property-1.html"
-                                                                              class="text-dark hover-primary">Home in Metric Way</a></h2>
-                        <p class="card-text font-weight-500 text-gray-light mb-2">1421 San Pedro St, Los Angeles</p>
+                        <h2 class="card-title fs-16 lh-2 mb-0"><a href="single-property?did='.$row['id'].'"
+                                                                              class="text-dark hover-primary"><?php echo $row['name']; ?></a></h2>
+                        <p class="card-text font-weight-500 text-gray-light mb-2"><?php echo $row['location']; ?></p>
                         <ul class="list-inline d-flex mb-0 flex-wrap mr-n4">
-                          <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-4"
-                                            data-toggle="tooltip" title="3 Bedroom">
-                            <svg class="icon icon-bedroom fs-18 text-primary mr-1">
-                              <use xlink:href="#icon-bedroom"></use>
-                            </svg>
-                            3 Br
-                          </li>
-                          <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-4"
-                                            data-toggle="tooltip" title="3 Bathrooms">
-                            <svg class="icon icon-shower fs-18 text-primary mr-1">
-                              <use xlink:href="#icon-shower"></use>
-                            </svg>
-                            3 Ba
-                          </li>
                           <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-4"
                                             data-toggle="tooltip" title="Size">
                             <svg class="icon icon-square fs-18 text-primary mr-1">
                               <use xlink:href="#icon-square"></use>
                             </svg>
-                            2300 Sq.Ft
-                          </li>
-                          <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                            data-toggle="tooltip" title="1 Garage">
-                            <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                              <use xlink:href="#icon-Garage"></use>
-                            </svg>
-                            1 Gr
+                            <?php echo $row['size']; ?> Acres
                           </li>
                         </ul>
                       </div>
                       <div class="card-footer bg-transparent d-flex justify-content-between align-items-center py-3">
-                        <p class="fs-17 font-weight-bold text-heading mb-0">$1.250.000</p>
-                        <ul class="list-inline mb-0">
-                          <li class="list-inline-item">
-                            <a href="#"
-                                               class="w-40px h-40 border rounded-circle d-inline-flex align-items-center justify-content-center text-secondary bg-accent border-accent"
-                                               data-toggle="tooltip" title="Wishlist"><i
-                                                    class="fas fa-heart"></i></a>
-                          </li>
-                          <li class="list-inline-item">
-                            <a href="#"
-                                               class="w-40px h-40 border rounded-circle d-inline-flex align-items-center justify-content-center text-body hover-secondary bg-hover-accent border-hover-accent"
-                                               data-toggle="tooltip" title="Compare"><i
-                                                    class="fas fa-exchange-alt"></i></a>
-                          </li>
-                        </ul>
+                        <p class="fs-17 font-weight-bold text-heading mb-0">Ksh <?php echo $row['price']; ?></p>
                       </div>
                     </div>
-                  </div>
-                  <div class="box">
-                    <div class="card shadow-hover-2">
-                      <div class="hover-change-image bg-hover-overlay rounded-lg card-img-top">
-                        <img src="images/properties-grid-06.jpg"
-                                         alt="Garden Gingerbread House">
-                        <div class="card-img-overlay p-2 d-flex flex-column">
-                          <div>
-                            <span class="badge mr-2 badge-primary">for Sale</span>
-                          </div>
-                          <ul class="list-inline mb-0 mt-auto hover-image">
-                            <li class="list-inline-item mr-2" data-toggle="tooltip" title="9 Images">
-                              <a href="#" class="text-white hover-primary">
-                                <i class="far fa-images"></i><span class="pl-1">9</span>
-                              </a>
-                            </li>
-                            <li class="list-inline-item" data-toggle="tooltip" title="2 Video">
-                              <a href="#" class="text-white hover-primary">
-                                <i class="far fa-play-circle"></i><span class="pl-1">2</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-body pt-3">
-                        <h2 class="card-title fs-16 lh-2 mb-0"><a href="single-property-1.html"
-                                                                              class="text-dark hover-primary">Garden Gingerbread House</a></h2>
-                        <p class="card-text font-weight-500 text-gray-light mb-2">1421 San Pedro St, Los Angeles</p>
-                        <ul class="list-inline d-flex mb-0 flex-wrap mr-n4">
-                          <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-4"
-                                            data-toggle="tooltip" title="3 Bedroom">
-                            <svg class="icon icon-bedroom fs-18 text-primary mr-1">
-                              <use xlink:href="#icon-bedroom"></use>
-                            </svg>
-                            3 Br
-                          </li>
-                          <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-4"
-                                            data-toggle="tooltip" title="3 Bathrooms">
-                            <svg class="icon icon-shower fs-18 text-primary mr-1">
-                              <use xlink:href="#icon-shower"></use>
-                            </svg>
-                            3 Ba
-                          </li>
-                          <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-4"
-                                            data-toggle="tooltip" title="Size">
-                            <svg class="icon icon-square fs-18 text-primary mr-1">
-                              <use xlink:href="#icon-square"></use>
-                            </svg>
-                            2300 Sq.Ft
-                          </li>
-                          <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                            data-toggle="tooltip" title="1 Garage">
-                            <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                              <use xlink:href="#icon-Garage"></use>
-                            </svg>
-                            1 Gr
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="card-footer bg-transparent d-flex justify-content-between align-items-center py-3">
-                        <p class="fs-17 font-weight-bold text-heading mb-0">$550<span
-                                            class="text-gray-light font-weight-500 fs-14"> / month</span>
-                        </p>
-                        <ul class="list-inline mb-0">
-                          <li class="list-inline-item">
-                            <a href="#"
-                                               class="w-40px h-40 border rounded-circle d-inline-flex align-items-center justify-content-center text-body hover-secondary bg-hover-accent border-hover-accent"
-                                               data-toggle="tooltip" title="Wishlist"><i
-                                                    class="far fa-heart"></i></a>
-                          </li>
-                          <li class="list-inline-item">
-                            <a href="#"
-                                               class="w-40px h-40 border rounded-circle d-inline-flex align-items-center justify-content-center text-body hover-secondary bg-hover-accent border-hover-accent"
-                                               data-toggle="tooltip" title="Compare"><i
-                                                    class="fas fa-exchange-alt"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="box">
-                    <div class="card shadow-hover-2">
-                      <div class="hover-change-image bg-hover-overlay rounded-lg card-img-top">
-                        <img src="images/properties-grid-02.jpg"
-                                         alt="Affordable Urban House">
-                        <div class="card-img-overlay p-2 d-flex flex-column">
-                          <div>
-                            <span class="badge mr-2 badge-primary">for Sale</span>
-                          </div>
-                          <ul class="list-inline mb-0 mt-auto hover-image">
-                            <li class="list-inline-item mr-2" data-toggle="tooltip" title="9 Images">
-                              <a href="#" class="text-white hover-primary">
-                                <i class="far fa-images"></i><span class="pl-1">9</span>
-                              </a>
-                            </li>
-                            <li class="list-inline-item" data-toggle="tooltip" title="2 Video">
-                              <a href="#" class="text-white hover-primary">
-                                <i class="far fa-play-circle"></i><span class="pl-1">2</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-body pt-3">
-                        <h2 class="card-title fs-16 lh-2 mb-0"><a href="single-property-1.html"
-                                                                              class="text-dark hover-primary">Affordable Urban House</a></h2>
-                        <p class="card-text font-weight-500 text-gray-light mb-2">1421 San Pedro St, Los Angeles</p>
-                        <ul class="list-inline d-flex mb-0 flex-wrap mr-n4">
-                          <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-4"
-                                            data-toggle="tooltip" title="3 Bedroom">
-                            <svg class="icon icon-bedroom fs-18 text-primary mr-1">
-                              <use xlink:href="#icon-bedroom"></use>
-                            </svg>
-                            3 Br
-                          </li>
-                          <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-4"
-                                            data-toggle="tooltip" title="3 Bathrooms">
-                            <svg class="icon icon-shower fs-18 text-primary mr-1">
-                              <use xlink:href="#icon-shower"></use>
-                            </svg>
-                            3 Ba
-                          </li>
-                          <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-4"
-                                            data-toggle="tooltip" title="Size">
-                            <svg class="icon icon-square fs-18 text-primary mr-1">
-                              <use xlink:href="#icon-square"></use>
-                            </svg>
-                            2300 Sq.Ft
-                          </li>
-                          <li class="list-inline-item text-gray font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                            data-toggle="tooltip" title="1 Garage">
-                            <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                              <use xlink:href="#icon-Garage"></use>
-                            </svg>
-                            1 Gr
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="card-footer bg-transparent d-flex justify-content-between align-items-center py-3">
-                        <p class="fs-17 font-weight-bold text-heading mb-0">$1.250.000</p>
-                        <ul class="list-inline mb-0">
-                          <li class="list-inline-item">
-                            <a href="#"
-                                               class="w-40px h-40 border rounded-circle d-inline-flex align-items-center justify-content-center text-body hover-secondary bg-hover-accent border-hover-accent"
-                                               data-toggle="tooltip" title="Wishlist"><i
-                                                    class="far fa-heart"></i></a>
-                          </li>
-                          <li class="list-inline-item">
-                            <a href="#"
-                                               class="w-40px h-40 border rounded-circle d-inline-flex align-items-center justify-content-center text-body hover-secondary bg-hover-accent border-hover-accent"
-                                               data-toggle="tooltip" title="Compare"><i
-                                                    class="fas fa-exchange-alt"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </section>
             </article>
             <aside class="col-lg-4 pl-xl-4 primary-sidebar sidebar-sticky" id="sidebar">
               <div class="primary-sidebar-inner">
+                <?php
+                  $agent = $row['agent'];
+                  $selects = mysqli_query($server, "SELECT * FROM `users` WHERE `id` = '$agent'") or die(mysqli_error($server));
+                  while ($column = mysqli_fetch_assoc($selects)) {
+                ?>
                 <div class="card mb-4">
                   <div class="card-body px-6 py-4 text-center">
-                    <a href="agent-details-1.html" class="d-block mb-2">
+                    <a href="" class="d-block mb-2">
                       <img src="images/agent-1.jpg"
-                                     class="rounded-circle" alt="Oliver Beddows">
+                                     class="rounded-circle" alt="User pic">
                     </a>
-                    <a href="agent-details-1.html"
-                               class="fs-16 lh-214 text-dark mb-0 font-weight-500 hover-primary">Oliver Beddows</a>
+                    <a href=""
+                               class="fs-16 lh-214 text-dark mb-0 font-weight-500 hover-primary"><?php echo $column['firstname']; ?></a>
                     <p class="mb-0">Sales Excutive</p>
                     <ul class="list-inline mb-0">
                       <li class="list-inline-item fs-13 text-heading font-weight-500">4.8/5</li>
@@ -1765,9 +490,9 @@
                       </li>
                       <li class="list-inline-item fs-13 text-gray-light">(67 reviews)</li>
                     </ul>
-                    <a href="mailto:oliverbeddows@homeid.com" class="text-body">oliverbeddows@homeid.com</a>
-                    <a href="tel:123-900-68668" class="text-heading font-weight-600 d-block mb-4">123 900
-                      68668</a>
+                    <?php echo"
+                    <a href='mailto:".$row['email']."' class='text-body'>" .$row['email']. "</a>
+                    <a href='tel:".$row['tel']."' class='text-heading font-weight-600 d-block mb-4'>".$row['tel']. "</a>";?>
                     <ul class="list-inline border-bottom border-top py-3 mb-5">
                       <li class="list-inline-item mr-2">
                         <a href="#"
@@ -1790,121 +515,18 @@
                                             class="fab fa-linkedin-in"></i></a>
                       </li>
                     </ul>
-                    <form>
-                      <div class="form-group mb-2">
-                        <label for="name" class="sr-only">Name</label>
-                        <input type="text" class="form-control form-control-lg border-0 shadow-none"
-                                           id="name"
-                                           placeholder="First Name, Last Name">
-                      </div>
-                      <div class="form-group mb-2">
-                        <label for="email" class="sr-only">Email</label>
-                        <input type="text" class="form-control form-control-lg border-0 shadow-none"
-                                           id="email"
-                                           placeholder="Your email">
-                      </div>
-                      <div class="form-group mb-2">
-                        <label for="phone" class="sr-only">Phone</label>
-                        <input type="text" class="form-control form-control-lg border-0 shadow-none"
-                                           id="phone"
-                                           placeholder="Your phone">
-                      </div>
-                      <div class="form-group mb-4">
-                        <label for="message" class="sr-only">Message</label>
-                        <textarea class="form-control border-0 shadow-none" id="message"></textarea>
-                      </div>
-                      <button type="submit" class="btn btn-primary btn-lg btn-block shadow-none">Request
-                        Info
-                      </button>
-                      <a href="listing-with-left-sidebar.html"
-                                   class="d-flex align-items-center justify-content-center mt-4 text-heading hover-primary">
-                        <span class="badge badge-circle border fs-13 font-weight-bold  mr-2">5</span>
-                        <span class="font-weight-500 mr-2">Listed Properties</span>
-                        <span class="text-primary fs-16"><i class="far fa-long-arrow-right"></i></span>
-                      </a>
-                    </form>
                   </div>
                 </div>
-                <div class="card mb-4">
-                  <div class="card-body px-6 py-4">
-                    <h4 class="card-title fs-16 lh-2 text-dark mb-3">Mortgage Calculator</h4>
-                    <form>
-                      <div class="form-group">
-                        <label for="totalAmount">Total Amount</label>
-                        <div class="input-group input-group-lg">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text bg-gray-01 border-0 font-weight-600">$</span>
-                          </div>
-                          <input type="text" class="form-control border-0 shadow-none" id="totalAmount">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="downPayment">Down Paymentt</label>
-                        <div class="input-group input-group-lg">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text bg-gray-01 border-0 font-weight-600">$</span>
-                          </div>
-                          <input type="text" class="form-control border-0 shadow-none" id="downPayment">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="interestRate">Interest Rate</label>
-                        <div class="input-group input-group-lg">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text bg-gray-01 border-0 font-weight-600">%</span>
-                          </div>
-                          <input type="text" class="form-control border-0 shadow-none" id="interestRate">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="number-of-years">Number of years</label>
-                        <input type="text" class="form-control border-0 shadow-none form-control-lg"
-                                           id="number-of-years">
-                      </div>
-                      <div class="form-group mb-4">
-                        <label for="paymentPeriod">Payment Period</label>
-                        <select class="form-control border-0 shadow-none form-control-lg selectpicker"
-                                            title="" data-style="btn-lg py-2 h-52" id="paymentPeriod">
-                          <option>Monthly</option>
-                          <option>Yearly</option>
-                        </select>
-                      </div>
-                      <button type="submit" class="btn btn-primary btn-lg btn-block shadow-none">Caculate
-                      </button>
-                    </form>
-                    <ul class="list-group list-group-flush mt-3">
-                      <li class="list-group-item px-0">
-                        <div class="d-flex">
-                          <span>Monthly Payment</span>
-                          <span class="d-block ml-auto font-weight-500 text-heading">$33</span>
-                        </div>
-                      </li>
-                      <li class="list-group-item px-0">
-                        <div class="d-flex">
-                          <span>Total Cost of Loan</span>
-                          <span class="d-block ml-auto font-weight-500 text-heading">$464</span>
-                        </div>
-                      </li>
-                      <li class="list-group-item px-0">
-                        <div class="d-flex">
-                          <span>Total interest Paid</span>
-                          <span class="d-block ml-auto font-weight-500 text-heading">$119</span>
-                        </div>
-                      </li>
-                      <li class="list-group-item px-0">
-                        <div class="d-flex">
-                          <span>Mortgage Payment</span>
-                          <span class="d-block ml-auto font-weight-500 text-heading">$1.55</span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                <?php }}?>
                 <div class="card property-widget">
                   <div class="card-body px-6 pt-5 pb-6">
                     <h4 class="card-title fs-16 lh-2 text-dark mb-3">Featured Properties</h4>
                     <div class="slick-slider mx-0"
                                  data-slick-options='{"slidesToShow": 1, "autoplay":true}'>
+                      <?php
+                        $selects = mysqli_query($server, "SELECT * FROM `properties` WHERE `featured` = 1 LIMIT 3") or die(mysqli_error($server));
+                        while ($columns = mysqli_fetch_assoc($selects)) {
+                      ?>
                       <div class="box px-0">
                         <div class="card border-0">
                           <img src="images/feature-property-01.jpg" class="card-img"
@@ -1912,69 +534,30 @@
                           <div class="card-img-overlay d-flex flex-column bg-gradient-3 rounded-lg">
                             <div class="d-flex mb-auto">
                               <a href="#" class="mr-1 badge badge-orange">featured</a>
-                              <a href="#" class="badge badge-indigo">for Rent</a>
+                              <a href="#" class="badge badge-indigo">
+                              <?php
+                                $type = $columns['type'];
+                                if ($type == 1) {
+                                  echo "Residential";
+                                } else {
+                                  echo "Commercial";
+                                }                        
+                              ?>
+                              </a>
                             </div>
                             <div class="px-2 pb-2">
-                              <a href="single-property-1.html" class="text-white"><h5
-                                                        class="card-title fs-16 lh-2 mb-0">Villa on Hollywood
-                                  Boulevard</h5>
+                              <a href="single-property?did='.$row['id'].'" class="text-white">
+                                <h5 class="card-title fs-16 lh-2 mb-0"><?php echo $columns['name']; ?></h5>
                               </a>
-                              <p class="card-text text-gray-light mb-0 font-weight-500">1421 San
-                                Predro St, Los Angeles</p>
+                              <p class="card-text text-gray-light mb-0 font-weight-500"><?php echo $columns['location']; ?></p>
                               <p class="text-white mb-0"><span
-                                                        class="fs-17 font-weight-bold">$2500 </span>/month
+                                                        class="fs-17 font-weight-bold">Ksh <?php echo $columns['price']; ?> </span>
                               </p>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="box px-0">
-                        <div class="card border-0">
-                          <img src="images/feature-property-01.jpg" class="card-img"
-                                             alt="Villa on Hollywood Boulevard">
-                          <div class="card-img-overlay d-flex flex-column bg-gradient-3 rounded-lg">
-                            <div class="d-flex mb-auto">
-                              <a href="#" class="mr-1 badge badge-orange">featured</a>
-                              <a href="#" class="badge badge-indigo">for Rent</a>
-                            </div>
-                            <div class="px-2 pb-2">
-                              <a href="single-property-1.html" class="text-white"><h5
-                                                        class="card-title fs-16 lh-2 mb-0">Villa on Hollywood
-                                  Boulevard</h5>
-                              </a>
-                              <p class="card-text text-gray-light mb-0 font-weight-500">1421 San
-                                Predro St, Los Angeles</p>
-                              <p class="text-white mb-0"><span
-                                                        class="fs-17 font-weight-bold">$2500 </span>/month
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="box px-0">
-                        <div class="card border-0">
-                          <img src="images/feature-property-01.jpg" class="card-img"
-                                             alt="Villa on Hollywood Boulevard">
-                          <div class="card-img-overlay d-flex flex-column bg-gradient-3 rounded-lg">
-                            <div class="d-flex mb-auto">
-                              <a href="#" class="mr-1 badge badge-orange">featured</a>
-                              <a href="#" class="badge badge-indigo">for Rent</a>
-                            </div>
-                            <div class="px-2 pb-2">
-                              <a href="single-property-1.html" class="text-white"><h5
-                                                        class="card-title fs-16 lh-2 mb-0">Villa on Hollywood
-                                  Boulevard</h5>
-                              </a>
-                              <p class="card-text text-gray-light mb-0 font-weight-500">1421 San
-                                Predro St, Los Angeles</p>
-                              <p class="text-white mb-0"><span
-                                                        class="fs-17 font-weight-bold">$2500 </span>/month
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    </div><?php }?>
                   </div>
                 </div>
               </div>
@@ -1982,57 +565,6 @@
           </div>
         </div>
       </div>
-      <section>
-        <div class="d-flex bottom-bar-action bottom-bar-action-01 py-2 px-4 bg-gray-01 align-items-center position-fixed fixed-bottom d-sm-none">
-          <div class="media align-items-center">
-            <img src="images/irene-wallace.png" alt="Irene Wallace" class="mr-4 rounded-circle">
-            <div class="media-body">
-              <a href="#" class="d-block text-dark fs-15 font-weight-500 lh-15">Irene Wallace</a>
-              <span class="fs-13 lh-2">Sales Excutive</span>
-            </div>
-          </div>
-          <div class="ml-auto">
-            <button type="button" class="btn btn-primary fs-18 p-2 lh-1 mr-1 mb-1 shadow-none" data-toggle="modal"
-                    data-target="#modal-messenger"><i class="fal fa-comment"></i></button>
-            <a href="tel:(+84)2388-969-888" class="btn btn-primary fs-18 p-2 lh-1 mb-1 shadow-none" target="_blank"><i
-                    class="fal fa-phone"></i></a>
-          </div>
-        </div>
-        <div class="modal fade" id="modal-messenger" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header border-0 pb-0">
-                <h4 class="modal-title text-heading" id="exampleModalLabel">Contact Form</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body pb-6">
-                <div class="form-group mb-2">
-                  <input type="text" class="form-control form-control-lg border-0"
-                               placeholder="First Name, Last Name">
-                </div>
-                <div class="form-group mb-2">
-                  <input type="email" class="form-control form-control-lg border-0" placeholder="Your Email">
-                </div>
-                <div class="form-group mb-2">
-                  <input type="tel" class="form-control form-control-lg border-0" placeholder="Your phone">
-                </div>
-                <div class="form-group mb-2">
-                  <textarea class="form-control border-0"
-                                  rows="4">Hello, I'm interested in Villa Called Archangel</textarea>
-                </div>
-                <div class="form-group form-check mb-4">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                  <label class="form-check-label fs-13" for="exampleCheck3">Egestas fringilla phasellus faucibus
-                    scelerisque eleifend donec.</label>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block rounded">Request Info</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <?php
       include 'footer-v2.php'

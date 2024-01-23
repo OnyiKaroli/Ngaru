@@ -6,12 +6,10 @@
               <img src="images/logo.png" alt="Ngaru">
             </a>
             <div class="lh-26 font-weight-500">
-              <p class="mb-0">58 Howard Street #2 San Francisco</p>
-              <a class="d-block text-gray-light hover-primary" href="mailto:contact@homeid.com">contact@homeid.com</a>
+              <p class="mb-0">Room 502, Equity Plaza, Thika Town</p>
+              <a class="d-block text-gray-light hover-primary" href="mailto:ngarulogistics@gmail.com">ngarulogistics@gmail.com</a>
               <a class="d-block text-gray-light font-weight-bold hover-primary fs-15"
-                       href="tel:(+68)122109876">(+68)1221
-                09876</a>
-              <a class="d-block text-gray-light hover-primary" href="www.homeid.com">www.homeid.com</a>
+                       href="tel:(+68)122109876">+254 746 530 530</a>
             </div>
           </div>
           <div class="col-md-6 col-lg-2 mb-6 mb-md-0">
@@ -56,8 +54,7 @@
           </div>
           <div class="col-md-6 col-lg-4 mb-6 mb-md-0">
             <h4 class="text-heading fs-16 my-4 font-weight-500">Sign Up for Our Newsletter</h4>
-            <p class="font-weight-500 text-muted lh-184">Lorem ipsum dolor sit amet, consecte tur cing elit.
-              Suspe ndisse suscipit sagittis </p>
+            <p class="font-weight-500 text-muted lh-184">Sign up for our newsletter and stay ahead in the world of land opportunities!</p>
             <form>
               <div class="input-group input-group-lg mb-6">
                 <input type="email" required name="email" class="form-control shadow-none border-0 z-index-1" placeholder="Your email">
@@ -78,7 +75,7 @@
             </li>
           </ul>
           <p class="col-md-auto mt-4 mt-md-0">
-            © <script>document.write(new Date().getFullYear());</script> homeID. All Rights Reserved
+            © <script>document.write(new Date().getFullYear());</script> <a href="https://windand.com" target="_blank">Windand</a> All Rights Reserved
           </p>
         </div>
       </div>

@@ -52,7 +52,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
           </button>
           <strong>Successfully Logged out.</strong> <br>Log in to continue.
         </div>";
-        header( "refresh:url=../index" );
+        header( "refresh:2;url=../index" );
     }
   }
 
