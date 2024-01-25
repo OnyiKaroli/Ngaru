@@ -68,66 +68,49 @@
           </a>
         </div>
       </section>
-      <?php
-        include 'homesearch.php'
-      ?>
-      <section class="pt-10 pb-9">
+      <section class="pt-10 pb-7">
         <div class="container">
-          <h2 class="text-dark text-center lh-1625">
-            What Can We Help You Find?</h2>
-          <span class="heading-divider mx-auto"></span>
-          <div class="row info-box-4 mt-7">
-            <div class="col-lg-4 mb-6 mb-lg-0">
-              <div class="card border-0 bg-transparent shadow-xs-2 shadow-hover-lg-1 pl-8 pr-6 py-5"
-                     data-animate="fadeInUp">
-                <div class="card-img-top d-flex align-items-end justify-content-center">
-                  <img src="images/group-16.png"
-                             alt="Buy a new home">
+          <h2 class="text-heading text-center">Why choose us</h2>
+          <span class="heading-divider mx-auto mb-2"></span>
+          <div class="slick-slider arrow-haft-inner mx-0"
+             data-slick-options='{"slidesToShow": 4, "autoplay":true,"dots":false,"responsive":[{"breakpoint": 1200,"settings": {"slidesToShow":3,"arrows":false,"dots":true}},{"breakpoint": 992,"settings": {"slidesToShow":2,"arrows":false}},{"breakpoint": 768,"settings": {"slidesToShow": 2,"arrows":false,"autoplay":true}},{"breakpoint": 576,"settings": {"arrows":false,"slidesToShow": 1}}]}'>
+            <div class="box px-0 py-6" data-animate="fadeInUp">
+              <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                <div class="d-flex justify-content-center card-img-top">
+                  <img src="images/house.png" alt="Property Management">
                 </div>
-                <div class="card-body px-0 pt-6 pb-0">
-                  <a href="single-property-1.html"
-                           class="text-decoration-none d-flex align-items-center justify-content-center"><h4
-                                class="card-title fs-20 lh-1625 text-dark mb-1">Diaspora Investment Facilitation</h4>
-                  </a>
-                  <p class="card-text text-center">
-                  We specialize in connecting diaspora investors with prime land opportunities.
-                  </p>
+                <div class="card-body px-0 pt-5 pb-0 text-center">
+                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Affordable plots</h4>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 mb-6 mb-lg-0">
-              <div class="card border-0 bg-transparent shadow-xs-2 shadow-hover-lg-1 pl-8 pr-6 py-5"
-                     data-animate="fadeInUp">
-                <div class="card-img-top d-flex align-items-end justify-content-center">
-                  <img src="images/group-17.png"
-                             alt="Sell a home">
+            <div class="box px-0 py-6" data-animate="fadeInUp">
+              <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                <div class="d-flex justify-content-center card-img-top">
+                  <img src="images/mortgage.png" alt="Mortgage Service">
                 </div>
-                <div class="card-body px-0 pt-6 pb-0">
-                  <a href="single-property-1.html"
-                           class="text-decoration-none d-flex align-items-center justify-content-center"><h4
-                                class="card-title fs-20 lh-1625 text-dark mb-1">Residential and Commercial <br>Development</h4>
-                  </a>
-                  <p class="card-text text-center">
-                  we have a diverse range of land options to suit your development goals.
-                  </p>
+                <div class="card-body px-0 pt-5 pb-0 text-center">
+                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Flexible payment options</h4>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 mb-6 mb-lg-0">
-              <div class="card border-0 bg-transparent shadow-xs-2 shadow-hover-lg-1 pl-8 pr-6 py-5"
-                     data-animate="fadeInUp">
-                <div class="card-img-top d-flex align-items-end justify-content-center">
-                  <img src="images/group-21.png"
-                             alt="Rent a home">
+            <div class="box px-0 py-6" data-animate="fadeInUp">
+              <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                <div class="d-flex justify-content-center card-img-top">
+                  <img src="images/clipboard.png" alt="Consulting Service">
                 </div>
-                <div class="card-body px-0 pt-6 pb-0">
-                  <a href="single-property-1.html"
-                           class="text-decoration-none d-flex align-items-center justify-content-center"><h4
-                                class="card-title fs-20 lh-1625 text-dark mb-1">Ease of purchase</h4>
-                  </a>
-                  <p class="card-text text-center">
-                  From transparent pricing and clear documentation to guidance on financing options.
-                  </p>
+                <div class="card-body px-0 pt-5 pb-0 text-center">
+                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Ready title deeds</h4>
+                </div>
+              </div>
+            </div>
+            <div class="box px-0 py-6" data-animate="fadeInUp">
+              <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
+                <div class="d-flex justify-content-center card-img-top">
+                  <img src="images/building.png" alt="Recover Asset Value">
+                </div>
+                <div class="card-body px-0 pt-5 pb-0 text-center">
+                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Ready to build plots</h4>
                 </div>
               </div>
             </div>
@@ -137,7 +120,7 @@
       <section class="mb-6">
         <div class="container">
           <h2 class="text-dark text-center lh-1625">
-            Featured Locations
+            Our Gallery
           </h2>
           <span class="heading-divider mx-auto mb-7"></span>
           <div class="row">
@@ -145,60 +128,29 @@
               <div class="row flex-md-row flex-column">
                 <div class="col-md-6 mb-6">
                   <div class="card border-0 text-white bg-overlay hover-zoom-in" data-animate="zoomIn">
-                    <img src="images/properties-city-15.jpg" class="card-img" alt="New York">
-                    <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
-                      <h2 class="mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Thika</a></h2>
-                      <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">FROM<span
-                                        class="ml-2 fs-15 font-weight-bold">Ksh 15.5M</span>
-                      </p>
-                    </div>
+                    <img src="img/1.jpg" class="card-img" alt="New York">
                   </div>
                 </div>
                 <div class="col-md-6 mb-6">
                   <div class="card border-0 text-white bg-overlay hover-zoom-in" data-animate="zoomIn">
-                    <img src="images/properties-city-16.jpg" class="card-img" alt="New York">
-                    <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
-                      <h2 class="mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Nakuru</a></h2>
-                      <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">FROM<span
-                                        class="ml-2 fs-15 font-weight-bold">Ksh 0.95M</span>
-                      </p>
-                    </div>
+                    <img src="img/19.jpg" class="card-img" alt="New York">
                   </div>
                 </div>
                 <div class="col-md-6 mb-6">
                   <div class="card border-0 text-white bg-overlay hover-zoom-in" data-animate="zoomIn">
-                    <img src="images/properties-city-17.jpg" class="card-img" alt="New York">
-                    <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
-                      <h2 class="mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Ngong</a></h2>
-                      <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">FROM<span
-                                        class="ml-2 fs-15 font-weight-bold">Ksh 1.9M</span>
-                      </p>
-                    </div>
+                    <img src="img/36.jpg" class="card-img" alt="New York">
                   </div>
                 </div>
                 <div class="col-md-6 mb-6">
                   <div class="card border-0 text-white bg-overlay hover-zoom-in" data-animate="zoomIn">
-                    <img src="images/properties-city-18.jpg" class="card-img" alt="New York">
-                    <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
-                      <h2 class="mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Kajiado</a></h2>
-                      <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">FROM<span
-                                        class="ml-2 fs-15 font-weight-bold">Ksh 1.3M</span>
-                      </p>
-                    </div>
+                    <img src="img/16.jpg" class="card-img" alt="New York">
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="card text-white bg-overlay hover-zoom-in" data-animate="zoomIn">
-                <img src="images/properties-city-14.jpg" class="card-img" alt="New York">
-                <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
-                  <h2 class="card-title mb-0 fs-20 lh-182"><a href="listing-full-width-list.html" class="text-white">Nanyuki</a>
-                  </h2>
-                  <p class="card-text fs-13 font-weight-500 letter-spacing-087 mb-0">FROM<span
-                                class="ml-2 fs-15 font-weight-bold">Ksh 0.45M</span>
-                  </p>
-                </div>
+                <img src="img/10.jpg" class="card-img" alt="New York">
               </div>
             </div>
           </div>
@@ -263,59 +215,6 @@
           </div>
         </div>
       </section>
-      <section class="pt-10 pb-7">
-        <div class="container">
-          <h2 class="text-heading text-center">Services Offered</h2>
-          <span class="heading-divider mx-auto mb-2"></span>
-          <div class="slick-slider arrow-haft-inner mx-0"
-             data-slick-options='{"slidesToShow": 4, "autoplay":true,"dots":false,"responsive":[{"breakpoint": 1200,"settings": {"slidesToShow":3,"arrows":false,"dots":true}},{"breakpoint": 992,"settings": {"slidesToShow":2,"arrows":false}},{"breakpoint": 768,"settings": {"slidesToShow": 2,"arrows":false,"autoplay":true}},{"breakpoint": 576,"settings": {"arrows":false,"slidesToShow": 1}}]}'>
-            <div class="box px-0 py-6" data-animate="fadeInUp">
-              <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
-                <div class="d-flex justify-content-center card-img-top">
-                  <img src="images/house.png" alt="Property Management">
-                </div>
-                <div class="card-body px-0 pt-5 pb-0 text-center">
-                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Property Listings</h4>
-                  <p class="card-text text-body px-8">Our detailed listings provide comprehensive information, including property size, location, zoning details, and more.</p>
-                </div>
-              </div>
-            </div>
-            <div class="box px-0 py-6" data-animate="fadeInUp">
-              <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
-                <div class="d-flex justify-content-center card-img-top">
-                  <img src="images/mortgage.png" alt="Mortgage Service">
-                </div>
-                <div class="card-body px-0 pt-5 pb-0 text-center">
-                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Development Opportunities</h4>
-                  <p class="card-text text-body px-8">Whether you're planning to build your dream home or embark on a commercial development project, we have the right land options for you.</p>
-                </div>
-              </div>
-            </div>
-            <div class="box px-0 py-6" data-animate="fadeInUp">
-              <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
-                <div class="d-flex justify-content-center card-img-top">
-                  <img src="images/clipboard.png" alt="Consulting Service">
-                </div>
-                <div class="card-body px-0 pt-5 pb-0 text-center">
-                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Legal Guidance</h4>
-                  <p class="card-text text-body px-8">Our team can provide guidance on zoning regulations, property titles, and legal procedures to ensure a smooth and compliant transaction.</p>
-                </div>
-              </div>
-            </div>
-            <div class="box px-0 py-6" data-animate="fadeInUp">
-              <div class="card border-0 py-7 px-4 shadow-hover-3 bg-transparent bg-hover-white">
-                <div class="d-flex justify-content-center card-img-top">
-                  <img src="images/building.png" alt="Recover Asset Value">
-                </div>
-                <div class="card-body px-0 pt-5 pb-0 text-center">
-                  <h4 class="card-title fs-16 lh-13 text-dark mb-2 px-10">Recover Asset Value</h4>
-                  <p class="card-text text-body px-8">Explore our services and let us help you find the perfect piece of land for your unique goals.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="bg-gray-02 pt-10 pb-10">
         <div class="container">
           <p class="text-primary letter-spacing-263 text-uppercase lh-186 text-center mb-0">news & articles</p>
@@ -358,7 +257,7 @@
         </div>
       </section>
       <section class="py-lg-11 pt-8 pb-lg-10 position-relative bg-cover"
-         style="background-image: url('images/bg-contact-form-01.jpg')">
+         style="background-image: url('img/3.jpg')">
         <div class="container">
           <div class="row">
             <div class="col-xl-5 col-lg-6">
@@ -404,44 +303,6 @@
           </div>
         </div>
       </section>
-      <div id="compare" class="compare">
-        <button class="btn shadow btn-open bg-white bg-hover-accent text-secondary rounded-right-0 d-flex justify-content-center align-items-center w-30px h-140 p-0">
-        </button>
-        <div class="list-group list-group-no-border bg-dark py-3">
-          <a href="#" class="list-group-item bg-transparent text-white fs-22 text-center py-0">
-            <i class="far fa-bars"></i>
-          </a>
-          <div class="list-group-item card bg-transparent">
-            <div class="position-relative hover-change-image bg-hover-overlay">
-              <img src="images/compare-01.jpg" class="card-img" alt="properties">
-              <div class="card-img-overlay">
-                <a href="#" class="text-white hover-image fs-16 lh-1 pos-fixed-top-right position-absolute m-2"><i class="fal fa-minus-circle"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="list-group-item card bg-transparent">
-            <div class="position-relative hover-change-image bg-hover-overlay">
-              <img src="images/compare-02.jpg" class="card-img" alt="properties">
-              <div class="card-img-overlay">
-                <a href="#" class="text-white hover-image fs-16 lh-1 pos-fixed-top-right position-absolute m-2"><i class="fal fa-minus-circle"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="list-group-item card card bg-transparent">
-            <div class="position-relative hover-change-image bg-hover-overlay ">
-              <img src="images/compare-03.jpg" class="card-img" alt="properties">
-              <div class="card-img-overlay">
-                <a href="#" class="text-white hover-image fs-16 lh-1 pos-fixed-top-right position-absolute m-2"><i class="fal fa-minus-circle"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="list-group-item bg-transparent">
-            <a href="compare-details.html" class="btn btn-lg btn-primary w-100 px-0 d-flex justify-content-center">
-              Compare
-            </a>
-          </div>
-        </div>
-      </div>
     </main>
     <?php
       include 'footer.php'

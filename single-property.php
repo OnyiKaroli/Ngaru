@@ -404,12 +404,12 @@
               ?>
               <section class="mt-2 pb-7 px-6 pt-6 bg-white rounded-lg">
                 <h4 class="fs-22 text-heading mb-6">Similar Homes You May Like</h4>
+                <div class="slick-slider"
+                         data-slick-options='{"slidesToShow": 2, "dots":false,"responsive":[{"breakpoint": 1200,"settings": {"slidesToShow":2,"arrows":false}},{"breakpoint": 992,"settings": {"slidesToShow":2}},{"breakpoint": 768,"settings": {"slidesToShow": 1}},{"breakpoint": 576,"settings": {"slidesToShow": 1}}]}'>
                   <?php
                     $select = mysqli_query($server, "SELECT * FROM `properties` WHERE `id` != '$view_id' ORDER BY `id` ASC LIMIT 3") or die(mysqli_error($server));
                     while ($row = mysqli_fetch_assoc($select)) {
                   ?>
-                <div class="slick-slider"
-                         data-slick-options='{"slidesToShow": 2, "dots":false,"responsive":[{"breakpoint": 1200,"settings": {"slidesToShow":2,"arrows":false}},{"breakpoint": 992,"settings": {"slidesToShow":2}},{"breakpoint": 768,"settings": {"slidesToShow": 1}},{"breakpoint": 576,"settings": {"slidesToShow": 1}}]}'>
                   <div class="box">
                     <div class="card shadow-hover-2">
                       <div class="hover-change-image bg-hover-overlay rounded-lg card-img-top">
@@ -448,14 +448,16 @@
                         <p class="fs-17 font-weight-bold text-heading mb-0">Ksh <?php echo $row['price']; ?></p>
                       </div>
                     </div>
-                </div>
+                  </div><?php }?>
               </section>
             </article>
             <aside class="col-lg-4 pl-xl-4 primary-sidebar sidebar-sticky" id="sidebar">
               <div class="primary-sidebar-inner">
                 <?php
+                  $select = mysqli_query($server, "SELECT * FROM `properties` WHERE `id` = '$view_id' LIMIT 1") or die(mysqli_error($server));
+                  while ($row = mysqli_fetch_assoc($select)) {
                   $agent = $row['agent'];
-                  $selects = mysqli_query($server, "SELECT * FROM `users` WHERE `id` = '$agent'") or die(mysqli_error($server));
+                  $selects = mysqli_query($server, "SELECT * FROM `users` WHERE `id` = '$agent' LIMIT 1") or die(mysqli_error($server));
                   while ($column = mysqli_fetch_assoc($selects)) {
                 ?>
                 <div class="card mb-4">
@@ -491,8 +493,8 @@
                       <li class="list-inline-item fs-13 text-gray-light">(67 reviews)</li>
                     </ul>
                     <?php echo"
-                    <a href='mailto:".$row['email']."' class='text-body'>" .$row['email']. "</a>
-                    <a href='tel:".$row['tel']."' class='text-heading font-weight-600 d-block mb-4'>".$row['tel']. "</a>";?>
+                    <a href='mailto:".$column['email']."' class='text-body'>" .$column['email']. "</a>
+                    <a href='tel:".$column['tel']."' class='text-heading font-weight-600 d-block mb-4'>".$column['tel']. "</a>";?>
                     <ul class="list-inline border-bottom border-top py-3 mb-5">
                       <li class="list-inline-item mr-2">
                         <a href="#"
@@ -521,12 +523,12 @@
                 <div class="card property-widget">
                   <div class="card-body px-6 pt-5 pb-6">
                     <h4 class="card-title fs-16 lh-2 text-dark mb-3">Featured Properties</h4>
-                    <div class="slick-slider mx-0"
-                                 data-slick-options='{"slidesToShow": 1, "autoplay":true}'>
-                      <?php
+                          <div class="slick-slider mx-0"
+                                       data-slick-options='{"slidesToShow": 1, "autoplay":true}'>
+                    <?php
                         $selects = mysqli_query($server, "SELECT * FROM `properties` WHERE `featured` = 1 LIMIT 3") or die(mysqli_error($server));
                         while ($columns = mysqli_fetch_assoc($selects)) {
-                      ?>
+                          ?>
                       <div class="box px-0">
                         <div class="card border-0">
                           <img src="images/feature-property-01.jpg" class="card-img"
@@ -556,8 +558,8 @@
                             </div>
                           </div>
                         </div>
+                      </div><?php }?>
                       </div>
-                    </div><?php }?>
                   </div>
                 </div>
               </div>

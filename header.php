@@ -53,27 +53,6 @@
                   </a>
                   </li>
               </ul>
-              <div class="d-block d-lg-none">
-                <ul class="navbar-nav flex-row justify-content-lg-end d-flex flex-wrap py-2">
-                  <li class="nav-item">
-                    <a class="nav-link  px-2" data-toggle="modal" href="#login-register-modal">SIGN IN</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="d-none d-lg-block">
-              <ul class="navbar-nav flex-row justify-content-lg-end d-flex flex-wrap text-body py-2">
-                <li class="nav-item">
-                  <a class="nav-link  px-2" data-toggle="modal" href="#login-register-modal">SIGN IN</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link px-2 position-relative" href="#">
-                    <i class="fal fa-heart fs-large-4"></i>
-                    <span class="badge badge-primary badge-circle badge-absolute">1</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
           </nav>
         </div>
       </div>
